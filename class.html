@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ligth.css" id="links">
+</head>
+
+
+<body>
+
+    <div> 
+        <button onclick="light()">light mode</button>
+        <button onclick="dark()">dark mode</button>
+    </div>
+
+
+
+    <h1 class="may"  id="may" style="text-align: center;"></h1>
+    <button onclick="mark()" style="margin: auto;">pls verify u're details</button><br><br><br><br>
+
+
+
+
+    <script>
+        // function julie(){
+        //     document.write('write a boy')
+        // }
+
+        function mark() {
+            let greeting = prompt('hello there welcome, may i know your name');
+            let agedata = prompt(`wow ${greeting} you have a nice name pls tell me your age to continue `);
+            document.getElementById('may').innerHTML=`wow ${greeting} you are ${agedata} years old, luck for you, you are allowed to continue`;
+        }
+        function dark() {
+            document.getElementById('links').href = 'dark.css'
+        }
+        function light() {
+            document.getElementById('links').href = 'ligth.css'
+        }
+    </script>
+
+
+    <script src="class.js"></script>
+
+
+</body>
+
+</html>
