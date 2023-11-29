@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ligth.css" id="links">
+</head>
+
+
+<body>
+
+    <div>
+        <button onclick="light()">light mode</button>
+        <button onclick="dark()">dark mode</button>
+    </div>
+
+
+
+    <h1 class="may" id="may" style="text-align: center;"></h1>
+    <button onclick="mark()" style="margin: auto;">pls verify u're details</button><br><br><br><br>
+
+
+    <button onclick="view()"
+        style="padding: 10px 20px;color: white; background: brown;border: none;border-radius: 20px;">
+        View your order
+    </button>
+
+
+    <h1 class="may" id="mal"
+        style="text-align: center;color: white;background:darkblue ;border-radius: 20px;padding: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    </h1>
+
+
+
+
+    <script>
+        // function julie(){
+        //     document.write('write a boy')
+        // }
+
+
+
+        function view() {
+            let restplace = {
+                name: 'chicken republic',
+                location: 'bodija, aare',
+                menu: {
+                    swallow: ['eba', 'fufu', 'amala'],
+                    soup: ['egusi', 'gbegiri ati ewedu', 'okro'],
+                    drink: ['coke', 'fanta', 'guiness'],
+                    meat: ['chicken', 'turkey', 'beef'],
+
+
+
+                },
+                price: '3000 naira per plate',
+                day: ['sunday', 'monday', 'tuesday', 'wednesday', 'thurday', 'friday', 'saturday']
+
+
+            }
+            let day = new Date().getDay()
+
+
+            document.getElementById('mal').innerHTML = ` You have ordered  ${restplace.menu.swallow[2]}
+             with ${restplace.menu.soup[1]} with a chilled bottle of ${restplace.menu.drink[2]} sided with a big piece of 
+             ${restplace.menu.meat[1]} all at a price of ${restplace.price} to be delivered ${restplace.day[day]} from ${restplace.name} located at ${restplace.location} `;
+
+
+            let month = new Date().getmonth()
+
+            let cities = ['lagos', 'abuja', 'benin', 'kano', 'owerri',]
+
+
+        }
+
+
+
+
+
+
+        let po = +(prompt('what is your age'));
+        let lo = 4;
+        alert(po + lo)
+
+
+    </script>
+
+
+    <script src="class.js"></script>
+
+
+</body>
+
+</html>

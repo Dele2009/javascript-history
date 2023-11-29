@@ -1,0 +1,79 @@
+body{
+    background: black;
+    padding-top: 50px;
+}
+header{
+    color:  rgb(36, 83, 150);
+    background: rgba(208, 206, 206, 0.392);
+}
+.header {
+    text-align: center;
+    
+}
+.header .row{
+    color: rgb(159, 159, 218);
+}
+table{
+    border: 4px solid white;
+    
+    
+
+}
+td{
+    border: 2px solid white;
+    text-align: center;
+    color: rgb(159, 159, 218);
+    font-weight: bold;
+}
+thead{
+    font-size: 30px;
+    color: rgb(36, 83, 150);
+    background: rgba(213, 212, 212, 0.392);
+}
+tbody{
+    background: rgba(107, 106, 106, 0.119);
+}
+#button1 {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: grey;
+    box-shadow: inset 0px 0px 7px black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 17px;
+}
+
+#button2 {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: black;
+    box-shadow: inset 0px 0px 7px white;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 17px;
+}
+
+#button3 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: rgb(2, 208, 2);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+
+#may {
+
+    text-transform: capitalize;
+    color: white;
+    background: rgb(105, 244, 5);
+    border-radius: 20px;
+
+}
