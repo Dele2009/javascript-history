@@ -32,60 +32,144 @@
         style="text-align: center;color: white;background:darkblue ;border-radius: 20px;padding: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     </h1>
 
+    <h1 style="margin: auto;width: fit-content;">Application form</h1>
+
+    <div style="display: flex;justify-content: center;align-items: center;">
+
+        <input type="text" required id="myage" placeholder="how old are you" style="width: 250px;height: 40px">
+        <button onclick="load()" style="height: 45px;background: green;color: white;">check Eligibility</button>
+    </div>
+    <h1 id="result" style="margin: auto;width: fit-content;"></h1>
+
+
 
 
 
     <script>
+
+        function load() {
+            let age = document.getElementById('myage').value;
+            let apply;
+
+
+            if (age == "") {
+                apply = 'pls input a value'
+            }
+            else if (age < 18) {
+                apply = 'you not old enough'
+
+
+
+            }
+
+
+            else if (age > 18 && age < 25) {
+                apply = 'you avergely old enough'
+
+
+
+            }
+
+            else if (age > 25) {
+                apply = 'you are old enough young'
+
+
+            }
+            else {
+                apply = 'pls input a digital value to check if u can try'
+            }
+            document.getElementById('result').innerHTML = apply + " " + 'to apply for the job';
+        }
+
+
+        let a = prompt("how old is nigeria");
+        a = Number(a);
+        switch (a) {
+            case 59:
+                alert('you are close');
+                break;
+            case 60:
+                alert('almost there');
+                break;
+            case 63:
+                alert('you are correct');
+                break;
+                default:
+                    alert('youy are wrong')
+        }
+
+
+
         // function julie(){
         //     document.write('write a boy')
         // }
 
 
 
-        function view() {
-            let restplace = {
-                name: 'chicken republic',
-                location: 'bodija, aare',
-                menu: {
-                    swallow: ['eba', 'fufu', 'amala'],
-                    soup: ['egusi', 'gbegiri ati ewedu', 'okro'],
-                    drink: ['coke', 'fanta', 'guiness'],
-                    meat: ['chicken', 'turkey', 'beef'],
+        // function view() {
+        //     let restplace = {
+        //         name: 'chicken republic',
+        //         location: 'bodija, aare',
+        //         menu: {
+        //             swallow: ['eba', 'fufu', 'amala'],
+        //             soup: ['egusi', 'gbegiri ati ewedu', 'okro'],
+        //             drink: ['coke', 'fanta', 'guiness'],
+        //             meat: ['chicken', 'turkey', 'beef'],
 
 
 
-                },
-                price: '3000 naira per plate',
-                day: ['sunday', 'monday', 'tuesday', 'wednesday', 'thurday', 'friday', 'saturday']
+        //         },
+        //         price: '3000 naira per plate',
+        //         day: ['sunday', 'monday', 'tuesday', 'wednesday', 'thurday', 'friday', 'saturday']
 
 
-            }
-            let day = new Date().getDay()
+        //     }
+        //     let day = new Date().getDay()
 
 
-            document.getElementById('mal').innerHTML = ` You have ordered  ${restplace.menu.swallow[2]}
-             with ${restplace.menu.soup[1]} with a chilled bottle of ${restplace.menu.drink[2]} sided with a big piece of 
-             ${restplace.menu.meat[1]} all at a price of ${restplace.price} to be delivered ${restplace.day[day]} from ${restplace.name} located at ${restplace.location} `;
+        //     document.getElementById('mal').innerHTML = ` You have ordered  ${restplace.menu.swallow[2]}
+        //      with ${restplace.menu.soup[1]} with a chilled bottle of ${restplace.menu.drink[2]} sided with a big piece of
+        //      ${restplace.menu.meat[1]} all at a price of ${restplace.price} to be delivered ${restplace.day[day]} from ${restplace.name} located at ${restplace.location} `;
 
 
-            let month = new Date().getmonth()
+        //     let month = new Date().getmonth()
 
-            let cities = ['lagos', 'abuja', 'benin', 'kano', 'owerri',]
-
-
-        }
+        //     let cities = ['lagos', 'abuja', 'benin', 'kano', 'owerri',]
 
 
-
+        // }
 
 
 
-        let po = +(prompt('what is your age'));
-        let lo = 4;
-        alert(po + lo)
+
+
+
+        // let po = +(prompt('what is your age'));
+        // let lo = 4;
+        // alert(po + lo)
+
+
+
+        // let a= 3;
+        // let h=9;
+        // h=toString(h)
+        // alert(a+h)
+
+
+        // let age =prompt("your age");
+        // let beverage=(age>21)?'beer':'water';
+        // alert(beverage)
+
+
+
+
 
 
     </script>
+    <!-- <script>
+        let a = new Date().getHours();
+        alert(a)
+    </script> -->
 
 
     <script src="class.js"></script>
