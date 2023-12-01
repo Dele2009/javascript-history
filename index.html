@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +16,7 @@
         body {
             padding: 0px 0px 0px 20%;
             background: black;
+            overflow-x: hidden;
         }
 
         body hr {}
@@ -147,7 +149,12 @@
             transform: scale(0.9);
         }
 
-        @media screen and (max-width:320px) {
+        .small-nav {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        /* @media screen and (max-width:320px) {
             body {
                 padding: 150px 0px 0px 0px;
             }
@@ -220,7 +227,8 @@
                 grid-template-columns: repeat(1, 1fr);
                 grid-gap: 0px;
             }
-        }
+
+        } */
 
 
 
@@ -238,14 +246,15 @@
             }
 
             #map {
-                width: fit-content;
-                position: fixed;
-                top: 0;
+                width: 100%;
+
+
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
 
+
                 visibility: visible;
-                background: black;
+                position: relative;
                 width: 100%;
                 margin: 0px 0px 0px 0px;
                 z-index: 5;
@@ -259,8 +268,8 @@
                 align-items: center;
                 text-decoration: none;
                 color: white;
-                font-size: 12px;
-                margin: 0px 0px;
+                font-size: 25px;
+                margin: 20px 0px;
 
             }
 
@@ -304,6 +313,48 @@
                 grid-template-columns: repeat(1, 1fr);
                 grid-gap: 20px;
             }
+
+            .small-nav {
+                visibility: visible;
+                position: fixed;
+                top: 0;
+            }
+
+            #javahis {
+                width: 450px;
+            }
+
+            #javaems {
+                width: 450px;
+            }
+
+            
+
+            #var-let-const {
+                width: 450px;
+            }
+
+            .var table {
+                width: 350px;
+            }
+
+            #ticks {
+                width: 450px;
+            }
+
+           
+
+            #Array {
+                width: 450px;
+            }
+
+            #oper {
+                width: 450px;
+            }
+
+            #state {
+                width: 450px;
+            }
         }
     </style>
 </head>
@@ -342,49 +393,84 @@
     </nav>
 
 
-    <nav style="background:;   " id="map">
-        <a href="#javahis" class="">
+    <nav style="display: flex;justify-content: space-between;align-items: center;width: 97%;background: black;z-index: 9;"
+        class="small-nav">
+        <h1 style="color: white;font-size: 35px;">JAVASCRIPT<h1>
+                <button type="button" class="border-0" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcan" style="font-weight: bold;background: none;">
 
-            <p>HISTORY OF JAVASCRIPT</p>
-        </a>
-        <a href="#javaems" class="">
 
-            <p>(E.M.C.A.) HISTORY</p>
-        </a>
-        <a href="#var-let-const" class="">
 
-            <p>VAR, LET & CONST</p>
-        </a>
-        <a href="#ticks" class="">
+                    <i class="fa-solid fa-bars" style="font-size: 30px;color: white"></i>
 
-            <p>QUOTES & BACKTICK</p>
-        </a>
-        <a href="#Array" class="">
+                </button>
 
-            <p>ARRAY CHAINING</p>
-        </a>
-        <a href="#oper" class="">
-
-            <p>OPERATORS</p>
-        </a>
-        <a href="#state" class="">
-
-            <p>STATEMENTS</p>
-        </a>
     </nav>
 
 
+    <div class="offcanvas offcanvas-top m-0 w-100"   id="offcan" aria-labelledby="offcanvasRightLabel">
+
+        <div class="offcanvas-header d-flex justify-content-end">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="color: white;"></button>
+        </div>
+        <div class="offcanvas-body" style="background: black;">
+            <nav style="background:; " id="map">
+                <a href="#javahis" class="">
+
+                    <p>HISTORY OF JAVASCRIPT</p>
+                </a>
+                <a href="#javaems" class="">
+
+                    <p>(E.M.C.A.) HISTORY</p>
+                </a>
+                <a href="#var-let-const" class="">
+
+                    <p>VAR, LET & CONST</p>
+                </a>
+                <a href="#ticks" class="">
+
+                    <p>QUOTES & BACKTICK</p>
+                </a>
+                <a href="#Array" class="">
+
+                    <p>ARRAY CHAINING</p>
+                </a>
+                <a href="#oper" class="">
+
+                    <p>OPERATORS</p>
+                </a>
+                <a href="#state" class="">
+
+                    <p>STATEMENTS</p>
+                </a>
+            </nav>
+
+
+        </div>
 
 
 
-    <div class="container w-100" id="javahis">
-        <div class="container-fluid">
-            <h1 class="text-center text-light"
+
+
+
+
+    </div>
+
+
+
+
+
+    <div class="container" id="javahis">
+        <div class="container-fluid w-100">
+            <h1 class="text-center text-light w-100"
                 style="font-size: 60px;background: rgb(52, 52, 52); color: white;margin: 0;padding: 34px;">
                 HISTORY OF
                 JAVASCRIPT
             </h1>
-            <h3 class="text-center" style="background: grey;padding: 30px;">JavaScript was invented by Brendan Eich in
+            <h3 class="text-center w-100" style="background: grey;padding: 30px;">JavaScript was invented by Brendan
+                Eich in
                 1995.
 
                 It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
@@ -411,15 +497,15 @@
     </div>
 
     <div class="container" style="background:  rgb(52, 52, 52);padding: 30px;" id="javaems">
-        <div class="container-fluid" style="margin: 30px;">
+        <div class="" style="margin: 30px;">
             <h4
                 style="text-align: center;width: fit-content;background: rgb(34, 34, 34); margin: auto; padding: 20px;color: white;">
                 History Of
                 JavaScript's (ECMA script 1 To ECMA script 6)</h4>
         </div>
-        <div class="container-fluid">
+        <div class="javaems">
 
-            <table class="rounded-4" style="border: 4px solid;">
+            <table class="" style="border: 4px solid;">
                 <thead>
                     <tr>
                         <td>Version</td>
@@ -540,7 +626,7 @@
                     re-declared, making it the strictest option for variable declarations, ideal for values that should
                     remain constant throughout the code.</h3>
         </div>
-        <div class="container-fluid var">
+        <div class="var">
             <table class="rounded-4" style="border: 4px solid;">
                 <h1 style="background: grey;color: white;text-align: center;">DIFFERENCES AND SIMILARITIES</h1>
                 <thead>
@@ -602,8 +688,7 @@
     <div class="container " id="ticks">
         <div class="container-fluid">
             <h1 class="text-center" style="background: grey;padding: 43px;color: white;">QUOTES & BACKTICKS</h2>
-                <div class="container-fluid"
-                    style="background:rgb(52, 52, 52) ;text-align: center;padding: 0px 0px 400px 0px;">
+                <div class="ticks" style="background:rgb(52, 52, 52) ;text-align: center;padding: 0px 0px 400px 0px;">
                     <h4 style="color: rgb(150, 150, 150);">Single and double quotes are essentially the same. Backticks,
                         however, allow us to embed any
                         expression into the string, by wrapping it in ${…} <br>
@@ -658,9 +743,9 @@
 
 
 
-                        <div class="container w-100">
-                            <div class="container-fluid w-100">
-                                <h1 style="background: ; width: 100%;">EXAMPLES</h1>
+                        <div class="container">
+                            <div class="">
+                                <h1 style="background:;">EXAMPLES</h1>
                                 <div class="container">
                                     <div class="container">
                                         <h3
@@ -732,8 +817,7 @@
         </div>
     </div>
 
-    <div id="Array" class="container"
-        style="color: white;background: grey;height: 520px;width: 100%;position: relative;">
+    <div id="Array" class="container" style="color: white;background: grey;height: 520px;;position: relative;">
         <div class="container-fluid "
             style="margin: auto;width: fit-content; display: flex;align-items: center;justify-content: center; height: 50px;position: relative;">
             <div>
@@ -766,7 +850,7 @@
     </div>
 
     <div class="container" id="oper"
-        style="color: white;background: rgb(54, 54, 54);height: 100px;width: 100%;position: relative;top: 0px;height: fit-content;padding: 40px;">
+        style="color: white;background: rgb(54, 54, 54);height: 100px;position: relative;top: 0px;height: fit-content;padding: 40px;">
         <div class="lop container-fluid">
             <div style="margin: 20px 0px ;">
                 <h1
@@ -805,7 +889,7 @@
 
             <div style="display: flex;justify-content: center;align-items: center;">
 
-                <input type="text"  class="rounded-start-4" required id="myage" placeholder="Guess answer between(50-70)"
+                <input type="text" class="rounded-start-4" required id="myage" placeholder="Guess between(50-70)"
                     style="width: 250px;height: 55px;margin: 20px 0px 0px 0px;border: none; padding:  0px 20px;">
                 <button onclick="load()" id="mal" class="rounded-end-4"
                     style="height: 55px;background: green;color: white;margin: 20px 0px 0px 0px;border: none; padding:  0px 20px;">Submit</button>
