@@ -172,14 +172,14 @@
                 style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
                 RETIREMENT CALCULATOR</h1>
         </div>
-        <div>
+        <div style="margin-top: 40px;margin-bottom: 15px;">
             <h4 class="text-center"
                 style="color:white; background: black;text-transform: uppercase; width: fit-content;margin: auto;padding: 10px;border-radius: 20px;">
                 please input your birthyear</h4>
         </div>
         <div class="container-fluid klm">
 
-            <div class="kop">
+            <div class="kop" style="margin-bottom: 25px;">
                 <input type="text" id="year">
                 <button onclick="agech()" style="background: black;color: white;padding: ;font-size: 30px;border-radius: 20px;">Check</button>
             </div>
@@ -208,9 +208,19 @@
 
 
             }
+            else if(birthyear>presentyear){
+                document.getElementById('pl').innerHTML = `Year invalid`
+                document.getElementById('pl').style.color = 'yellow'
+                document.getElementById('pl').style.visibility = 'visible'
+            }
+            else if(birthyear<=1958){
+                document.getElementById('pl').innerHTML = `Year invalid/retirement age met  please go and retire `
+                document.getElementById('pl').style.color = 'yellow'
+                document.getElementById('pl').style.visibility = 'visible'
+            }
             else {
                 
-                document.getElementById('pl').innerHTML = `You have ${retire}years until you are able to retire`
+                document.getElementById('pl').innerHTML = `You have ${retire}year(s) until you are able to retire`
                 document.getElementById('pl').style.color = 'white'
                 document.getElementById('pl').style.visibility = 'visible'
             }
