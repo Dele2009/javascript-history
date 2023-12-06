@@ -16,7 +16,17 @@
     <style>
         body {
             background: rgb(35, 35, 35);
-            padding: 50px 0px 90px 0px  ;
+            padding: 50px 0px 90px 0px;
+            overflow-x: hidden;
+        }
+       
+
+        .pl {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .cl {
@@ -83,7 +93,7 @@
 
         .max {
             position: absolute;
-            top: 220px;
+            top: 200px;
             margin-left: 200px;
 
         }
@@ -128,10 +138,12 @@
         .kop button {
             width: ;
         }
-        .grow{
+
+        .grow {
             margin-top: 150px;
         }
-        .tow{
+
+        .tow {
             margin: auto;
         }
     </style>
@@ -139,31 +151,34 @@
 
 <body>
 
-    <div class="container-fluid">
-        <div class="container "
+    <div class=" jk">
+        <div class=" "
             style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
             <h1>SIMPLE CALCULATOR</h1>
         </div>
-        <div class="container cl">
-            <div class="calc">
-                <input type="text" id="inp1"><br>
+        <div class="pl">
+            <div class="cl">
+                <div class="calc">
+                    <input type="text" id="inp1"><br>
 
-                <input type="text" id="inp2">
+                    <input type="text" id="inp2">
 
-            </div>
-            <div class="max">
-                <span id="symbol"></span>
-            </div>
-            <div class="buttons">
-                <button onclick="plus()" id="plus"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
-                <button onclick="divide()"><i class="fa-solid fa-divide"></i></button>
-                <button onclick="multiply()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="answer">
-                <span id="answer"></span>
+                </div>
+                <div class="max">
+                    <span id="symbol"></span>
+                </div>
+                <div class="buttons">
+                    <button onclick="plus()" id="plus"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
+                    <button onclick="divide()"><i class="fa-solid fa-divide"></i></button>
+                    <button onclick="multiply()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="answer">
+                    <span id="answer"></span>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container grow">
@@ -181,7 +196,8 @@
 
             <div class="kop" style="margin-bottom: 25px;">
                 <input type="text" id="year">
-                <button onclick="agech()" style="background: black;color: white;padding: ;font-size: 30px;border-radius: 20px;">Check</button>
+                <button onclick="agech()"
+                    style="background: black;color: white;padding: ;font-size: 30px;border-radius: 20px;">Check</button>
             </div>
         </div>
         <div>
@@ -200,26 +216,26 @@
             let presentyear = new Date().getFullYear();
             let userage = presentyear - birthyear;
             let retire = 65 - userage
-           
-            if (!birthyear || isNaN(birthyear)) {
+
+            if (!birthyear || isNaN(birthyear)){
                 document.getElementById('pl').innerHTML = `enter a year`
                 document.getElementById('pl').style.color = 'red'
                 document.getElementById('pl').style.visibility = 'visible'
 
 
             }
-            else if(birthyear>presentyear){
+            else if (birthyear > presentyear) {
                 document.getElementById('pl').innerHTML = `Year invalid`
                 document.getElementById('pl').style.color = 'yellow'
                 document.getElementById('pl').style.visibility = 'visible'
             }
-            else if(birthyear<=1958){
+            else if (birthyear <= 1958) {
                 document.getElementById('pl').innerHTML = `Year invalid/retirement age met  please go and retire `
                 document.getElementById('pl').style.color = 'yellow'
                 document.getElementById('pl').style.visibility = 'visible'
             }
             else {
-                
+
                 document.getElementById('pl').innerHTML = `You have ${retire}year(s) until you are able to retire`
                 document.getElementById('pl').style.color = 'white'
                 document.getElementById('pl').style.visibility = 'visible'

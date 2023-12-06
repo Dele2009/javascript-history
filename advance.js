@@ -101,4 +101,4 @@ function multiply() {
         document.getElementById('answer').style.color = 'black'
     }
 
-}
+}   
