@@ -15,7 +15,7 @@
         rel="stylesheet">
     <style>
         body {
-            padding: 0px 0px 0px 25%;
+            padding: 0px 0px 100px 25%;
             background: black;
             overflow-x: hidden;
         }
@@ -340,6 +340,14 @@
 
 
         /* GUESS MY NO */
+        .kunlo {
+            background-image: url(bAC.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: body 7s ease-in-out 0s infinite alternate;
+            padding: 150px 0px;
+            border-radius: 30px;
+        }
         @keyframes body {
             from {
                 background-image: url(bAC.jpg);
@@ -457,17 +465,18 @@
 
         @media screen and (max-width:870px) {
             body {
-                padding: 60px 0px 0px 0px;
-                
+                padding: 60px 0px 70px 0px;
+
             }
 
             .offcanvas {
                 visibility: visible;
                 position: fixed;
                 top: 0;
-                
+
             }
-            .offcanvas p{
+
+            .offcanvas p {
                 font-size: 20px;
                 padding: 0px 5px;
             }
@@ -668,6 +677,14 @@
                 width: 300px;
 
             }
+            .kunlo {
+            background-image: url(bAC.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: body 7s ease-in-out 0s infinite alternate;
+            padding: 100px 20px;
+            border-radius: 30px;
+        }
         }
     </style>
 </head>
@@ -1355,28 +1372,29 @@
             </div>
         </div>
 
+        <div class="kunlo">
+            <main id="thecon" style="width: fit-content;">
 
-        <main id="thecon" style="width: fit-content;">
-
-            <h2 style="text-align: center; color:  rgb(8, 87, 184);">LET'S GUESS A NUMBER</h2>
-            <section id="sect">
-                <input type="text" id="guess" placeholder="Guess a No. btw 1-30"
-                    style="position: relative;visibility: visible;width: 200px;height: 30px;padding:30px 20px;border-radius: 10px;border: none;">
-                <button id="button"
-                    style="position: relative;visibility: visible;margin: 15px 0px 0px 0px;padding: 10px 20px;border:none;border-radius: 10px;font-size: 20px; background-color: rgb(8, 87, 184); color: white;">GUESS</button>
-                <h2 id="output" style="position: relative;text-align: center;"></h2>
-                <a href="" id="buttonagain"
-                    style="position: absolute;visibility: hidden;margin: auto;border:none;border-radius: 10px;font-size: 20px;background-color: black;"><button
-                        style="padding: 10px 20px;border:none;">PLAY AGAIN</button></a>
-
-
-
-            </section>
+                <h2 style="text-align: center; color:  rgb(8, 87, 184);">LET'S GUESS A NUMBER</h2>
+                <section id="sect">
+                    <input type="text" id="guess" placeholder="Guess a No. btw 1-30"
+                        style="position: relative;visibility: visible;width: 200px;height: 30px;padding:30px 20px;border-radius: 10px;border: none;">
+                    <button id="button"
+                        style="position: relative;visibility: visible;margin: 15px 0px 0px 0px;padding: 10px 20px;border:none;border-radius: 10px;font-size: 20px; background-color: rgb(8, 87, 184); color: white;">GUESS</button>
+                    <h2 id="output" style="position: relative;text-align: center;"></h2>
+                    <a href="" id="buttonagain"
+                        style="position: absolute;visibility: hidden;margin: auto;border:none;border-radius: 10px;font-size: 20px;background-color: black;"><button
+                            style="padding: 10px 20px;border:none;">PLAY AGAIN</button></a>
 
 
 
+                </section>
 
-        </main>
+
+
+
+            </main>
+        </div>
     </div>
 
     <script>
