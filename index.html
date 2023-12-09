@@ -15,7 +15,7 @@
         rel="stylesheet">
     <style>
         body {
-            padding: 0px 0px 0px 20%;
+            padding: 0px 0px 0px 25%;
             background: black;
             overflow-x: hidden;
         }
@@ -26,10 +26,11 @@
             padding: 0;
             margin: 0;
         } */
-        .offcanvas{
+        .offcanvas {
             visibility: hidden;
             position: absolute;
         }
+
         .flowp table {
             margin: auto;
             border-radius: 10px;
@@ -84,6 +85,8 @@
             left: 0;
             height: 100%;
             padding: 20px;
+            z-index: 2;
+            overflow-y: auto;
         }
 
 
@@ -140,15 +143,27 @@
             height: 100px;
         }
 
-        .flowp .ul {
+        /* .flowp #ul {
             width: 250px;
             height: 200px;
-        }
+        } */
+
+        /* .flowp .muy{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 80px;
+            width: 100%;
+            margin: auto;
+        } */
 
         .flowp .pol {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 0px;
+            /* display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -30px;
             width: 100%;
         }
 
@@ -162,7 +177,7 @@
         }
 
         .flowp #Array {
-            height: 520px;
+            height: 320px;
         }
 
         .flowp #oper {
@@ -305,6 +320,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 150px;
 
         }
 
@@ -441,14 +457,20 @@
 
         @media screen and (max-width:870px) {
             body {
-                padding: 150px 0px 0px 0px;
-                overflow-x: ;
+                padding: 60px 0px 0px 0px;
+                
             }
-            .offcanvas{
-            visibility: visible;
-            position:fixed;
-            top: 0;
-        }
+
+            .offcanvas {
+                visibility: visible;
+                position: fixed;
+                top: 0;
+                
+            }
+            .offcanvas p{
+                font-size: 20px;
+                padding: 0px 5px;
+            }
 
             .flowp {
                 overflow-x: hidden;
@@ -528,6 +550,12 @@
                 margin: auto;
             }
 
+            .flowp .ul img {
+                width: 200px;
+                height: 180px;
+                margin: auto;
+            }
+
 
 
 
@@ -536,6 +564,7 @@
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 grid-gap: 20px;
+                margin: 0;
             }
 
             .flowp .small-nav {
@@ -548,7 +577,7 @@
                 /* width: 450px; */
                 margin: auto;
             }
-           
+
 
             /* .flowp #javaems {
                 display: flex;
@@ -570,9 +599,7 @@
                 margin: auto;
             } */
 
-            .flowp #ticks {
-               
-            }
+            .flowp #ticks {}
 
             /* .flowp #ticks img{
                 display: flex;
@@ -629,6 +656,7 @@
                 margin: auto;
                 font-size: 40px;
             }
+
             .oppl1 {
                 width: 300px;
                 overflow-x: scroll;
@@ -676,9 +704,20 @@
 
                 <p>STATEMENTS</p>
             </a>
-            <a href="advance.html" class="">
+
+
+
+            <a href="#calc" class="">
 
                 <p>SIMPLE CALCULATOR</p>
+            </a>
+            <a href="#retire" class="">
+
+                <p>RETIREMENT CALCULATOR</p>
+            </a>
+            <a href="#thecon" class="">
+
+                <p>GUESS A NUMBER</p>
             </a>
         </nav>
 
@@ -740,9 +779,20 @@
 
                         <p>STATEMENTS</p>
                     </a>
-                    <a href="advance.html" class="">
+
+
+
+                    <a href="#calc" class="">
 
                         <p>SIMPLE CALCULATOR</p>
+                    </a>
+                    <a href="#retire" class="">
+
+                        <p>RETIREMENT CALCULATOR</p>
+                    </a>
+                    <a href="#thecon" class="">
+
+                        <p>GUESS A NUMBER</p>
                     </a>
                 </nav>
 
@@ -763,7 +813,8 @@
 
         <div class="container" id="javahis">
             <div class="container-fluid">
-                <h1 class="text-center text-light w-100" style="background: rgb(52, 52, 52); color: white;margin: auto;padding: 34px;">
+                <h1 class="text-center text-light w-100"
+                    style="background: rgb(52, 52, 52); color: white;margin: auto;padding: 34px;">
                     HISTORY OF JAVASCRIPT
                 </h1>
                 <h3 class="text-center w-100" style="background: grey;padding: 30px;">JavaScript was invented by Brendan
@@ -796,7 +847,7 @@
         </div>
 
         <div class="container" style="background:  rgb(52, 52, 52);padding: 30px;" id="javaems">
-            
+
             <div class="" style="margin: 30px;display: flex;justify-content: center;align-items: center;">
                 <h4
                     style="text-align: center;width: fit-content;background: rgb(34, 34, 34); margin: auto; padding: 20px;color: white;">
@@ -911,7 +962,7 @@
                     </tbody>
                 </table>
             </div>
-        
+
         </div>
 
         <div class="container" id="var-let-const" style="padding: 20px;">
@@ -942,7 +993,7 @@
                 </div>
                 <div class="var oppl1">
                     <table class="rounded-4 tab" style="border: 4px solid;">
-                       
+
                         <thead>
                             <tr>
                                 <td>Var</td>
@@ -986,19 +1037,19 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                 </div>
                 <div class="container-fluid"
-                        style="background: rgb(52, 52, 52);color: white;text-align: center;padding: 20px;">
-                        <div class="container-fluid">
-                            <h2>EXAMPLES</h2>
-                            <div class="container" id="fay">
-                                <div class="container-fluid " id="jay">
-                                    <img src="uy.jpg" alt="">
-                                </div>
+                    style="background: rgb(52, 52, 52);color: white;text-align: center;padding: 20px;">
+                    <div class="container-fluid">
+                        <h2>EXAMPLES</h2>
+                        <div class="container" id="fay">
+                            <div class="container-fluid " id="jay">
+                                <img src="uy.jpg" alt="">
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
 
@@ -1083,7 +1134,7 @@
                             <div class="">
                                 <h1 style="background:;">EXAMPLES</h1>
                                 <div class="container">
-                                    <div class="container">
+                                    <div class="container" style="margin-top: 30px;">
                                         <h3
                                             style="color: white;background: black;padding: 30px 20px;width: fit-content;border-radius: 10px;margin: auto;">
                                             DOUBLE QUOTES</h3>
@@ -1105,12 +1156,12 @@
 
                                 </div>
                                 <div class="container">
-                                    <div class="container">
+                                    <div class="container" style="margin-top: 30px;">
                                         <h3
                                             style="color: white;background: black;padding: 30px 20px;width: fit-content;border-radius: 10px;margin: auto;">
                                             SINGLE QUOTES</h3>
                                     </div>
-                                    <div class="container pol">
+                                    <div class="container pol muy">
                                         <div class="container" id="kl">
                                             <div class="container-fluid" id="">
                                                 <img src="ju.jpg" id="">
@@ -1127,19 +1178,19 @@
                                 </div>
 
                                 <div class="container">
-                                    <div class="container">
+                                    <div class="container" style="margin-top: 75px;">
                                         <h3
                                             style="color: white;background: black;padding: 30px 20px;width: fit-content;border-radius: 10px;margin: auto;">
                                             BACKTICK</h3>
                                     </div>
-                                    <div class="container pol">
+                                    <div class="container pol muy">
                                         <div class="container" id="kl">
                                             <div class="container-fluid" id="">
                                                 <img src="po.jpg" id="">
                                             </div>
                                         </div>
 
-                                        <div class="container" id="kl">
+                                        <div class="container" id="kl ">
                                             <div class="container-fluid" id="">
                                                 <img src="oi.jpg" alt="" id=" ul">
                                             </div>
@@ -1246,7 +1297,7 @@
 
 
     <div class="container mike">
-        <div class=" jk">
+        <div class=" jk" id="calc">
             <div class=" "
                 style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
                 <h1>SIMPLE CALCULATOR</h1>
@@ -1276,7 +1327,7 @@
         </div>
 
 
-        <div class="container grow">
+        <div class="container grow" id="retire">
             <div class="mbb">
                 <div class="container-fluid tow">
                     <h1 class="text-center"
