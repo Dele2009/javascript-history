@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="dropdown-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Centered dropdown
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Action two</a></li>
+          <li><a class="dropdown-item" href="#">Action three</a></li>
+        </ul>
+      </div>
+    <title>GUESS A NUMBER</title>
+    <style>
+        body {
+            background-image: url(bAC.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: body 7s ease-in-out 0s infinite alternate;
+        }
+
+        @keyframes body {
+            from {
+                background-image: url(bAC.jpg);
+            }
+
+            to {
+                background-image: url(bac2.jpg);
+            }
+        }
+
+        #thecon {
+            background-color: rgb(130, 199, 255);
+            margin: auto;
+            padding: 25px;
+            border-radius: 25px;
+        }
+
+        #sect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+        }
+
+        #sect button {
+            width: fit-content;
+
+        }
+
+        ::placeholder {
+            color: rgba(0, 0, 0, 0.863);
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body style="font-family: cursive;padding-top: 200px;">
+    <div class="dropdown-center" style="position: fixed;top: 0;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Centered dropdown
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Action two</a></li>
+            <li><a class="dropdown-item" href="#">Action three</a></li>
+        </ul>
+    </div>
+
+    <main id="thecon" style="width: fit-content;">
+
+        <h1 style="text-align: center; color:  rgb(8, 87, 184);">LET'S GUESS A NUMBER</h1>
+        <section id="sect">
+            <input type="text" placeholder="Guess a No. btw 1-30"
+                style="position: relative;visibility: visible;width: 200px;height: 30px;padding:10px 20px;border-radius: 10px;border: none;">
+            <button id="button"
+                style="position: relative;visibility: visible;margin: 15px 0px 0px 0px;padding: 10px 20px;border:none;border-radius: 10px;font-size: 20px; background-color: rgb(8, 87, 184); color: white;">GUESS</button>
+            <h2 id="output" style="position: relative;text-align: center;"></h2>
+            <a href="" id="buttonagain"
+                style="position: absolute;visibility: hidden;margin: auto;border:none;border-radius: 10px;font-size: 20px;background-color: black;"><button
+                    style="padding: 10px 20px;border:none;">PLAY AGAIN</button></a>
+
+
+
+        </section>
+
+
+
+
+    </main>
+
+    <script>
+        let backplace;
+        let secretnum;
+        let userguess;
+        let output;
+        let fant;
+        let inp;
+        let guess = document.getElementById('button');
+        let playagain;
+
+        let score = 30;
+
+
+
+        function gameover() {
+            backplace = document.querySelector('main');
+            secretnum = 25;
+            userguess = document.querySelector('input').value;
+            inp = document.querySelector('input');
+            output = document.querySelector('h2');
+            fant = document.querySelector('section');
+            guess = document.getElementById('button');
+            playagain = document.getElementById('buttonagain');
+
+
+            score = score - 6;
+            if (score == 0) {
+                backplace.style.backgroundColor = 'red';
+                inp.style.visibility = 'hidden';
+                inp.style.position = 'absolute';
+                guess.style.visibility = 'hidden';
+                guess.style.position = 'absolute';
+                output.innerHTML = 'GAME OVER';
+                playagain.style.visibility = 'visible';
+                playagain.style.position = 'relative';
+            }
+        }
+
+        guess.addEventListener('click', () => {
+            backplace = document.querySelector('main');
+            secretnum = 25;
+            playagain = document.getElementById('buttonagain');
+            userguess = document.querySelector('input').value;
+            output = document.querySelector('h2');
+            inp = document.querySelector('input');
+            if (!userguess || isNaN(userguess)) {
+
+                output.innerHTML = 'pls input a guess';
+                output.style.color = 'orange';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                gameover();
+
+            }
+            else if (userguess < 1 || userguess > 30) {
+                output.innerHTML = 'Your guess is out of range';
+                output.style.color = 'orange';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                gameover();
+            }
+            else if (userguess <= 24) {
+                output.innerHTML = 'Your guess is too low';
+                output.style.color = 'gold';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                gameover();
+            }
+            else if (userguess >= 26) {
+                output.innerHTML = 'Your guess is too high';
+                output.style.color = 'red';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                gameover();
+            }
+
+
+            else if (userguess == secretnum) {
+                inp.style.visibility = 'hidden';
+                inp.style.position = 'absolute';
+                guess.style.visibility = 'hidden';
+                guess.style.position = 'absolute';
+                output.innerHTML = 'you are correct';
+                output.style.color = 'green';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'visible';
+                playagain.style.position = 'relative';
+                playagain.style.margin = 'auto';
+                backplace.style.backgroundColor = 'lightgreen';
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
