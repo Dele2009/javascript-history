@@ -215,7 +215,7 @@
             margin-top: 40px;
         }
 
-        .mike input {
+        .jike input {
             border: 3px solid black;
             margin: 0px;
             padding: 15px 20px;
@@ -348,6 +348,7 @@
             padding: 150px 0px;
             border-radius: 30px;
         }
+
         @keyframes body {
             from {
                 background-image: url(bAC.jpg);
@@ -358,12 +359,13 @@
             }
         }
 
-        #thecon {
+        .thecon {
             background-color: rgb(81, 81, 81);
             margin: auto;
             padding: 50px 25px;
             border-radius: 25px;
             border: 9px solid rgb(31, 31, 31);
+            width: fit-content;
         }
 
         #sect {
@@ -375,91 +377,65 @@
             margin: auto;
         }
 
-        #sect button {
-            width: fit-content;
+        .h2d {
+            text-align: center;
+            color: rgb(16, 6, 103);
+        }
+
+        .inn {
+            position: relative;
+            visibility: visible;
+            width: 200px;
+            height: 30px;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: none;
 
         }
+
+        .btngues {
+            position: relative;
+            visibility: visible;
+            margin: 15px 0px 0px 0px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: rgb(8, 87, 184);
+            color: white;
+            width: fit-content;
+        }
+
+        .btnagn {
+            position: absolute;
+            visibility: hidden;
+            margin: auto;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+
+            padding: 10px 20px;
+            border: none;
+            width: fit-content;
+        }
+
+        .out {
+            position: relative;
+            text-align: center;
+        }
+
+
+        /* #sect button {
+            width: fit-content;
+
+        } */
 
         ::placeholder {
             color: rgba(0, 0, 0, 0.863);
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
-        /* @media screen and (max-width:320px) {
-            body {
-                padding: 150px 0px 0px 0px;
-            }
 
-            #max {
-                visibility: hidden;
-                position: absolute;
-                height: 0%;
-                width: 0px;
-            }
-
-            #map {
-                width: fit-content;
-                position: fixed;
-                top: 0;
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-
-                visibility: visible;
-                background: black;
-                width: 100%;
-
-
-            }
-
-            #map a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-                font-size: 12px;
-                margin: 5px 2px;
-                background: grey;
-                padding: 10px 0px 0px 0px;
-                border-radius: 10px;
-            }
-
-            #fay {
-                width: 100%;
-                margin: auto;
-            }
-
-            #jay {
-                width: 100%;
-            }
-
-            #jay img {
-                width: 100%;
-            }
-
-            #mk img {
-                height: 100%;
-                width: 100%;
-
-            }
-
-            #kl {
-                width: 50px;
-                height: 100px;
-            }
-
-            .ul {
-                width: 250px;
-                height: 200px;
-            }
-
-            .pol {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-gap: 0px;
-            }
-
-        } */
 
 
 
@@ -644,20 +620,6 @@
 
 
 
-            /* .flowp #Array {
-                width: 450px;
-                margin: auto;
-            } */
-
-            /* .flowp #oper {
-                width: 450px;
-                margin: auto;
-            } */
-
-            /* .flowp #state {
-                width: 450px;
-                margin: auto;
-            } */
         }
 
         @media screen and (max-width:430px) {
@@ -678,14 +640,15 @@
                 width: 300px;
 
             }
+
             .kunlo {
-            background-image: url(bAC.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            animation: body 7s ease-in-out 0s infinite alternate;
-            padding: 100px 20px;
-            border-radius: 30px;
-        }
+                background-image: url(bAC.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation: body 7s ease-in-out 0s infinite alternate;
+                padding: 100px 20px;
+                border-radius: 30px;
+            }
         }
     </style>
 </head>
@@ -1315,77 +1278,77 @@
 
 
     <div class="container mike">
-        <div class=" jk" id="calc">
-            <div class=" "
-                style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
-                <h1>SIMPLE CALCULATOR</h1>
-            </div>
-            <div class="pl">
-                <div class="cl">
-                    <div class="calc">
-                        <input type="text" id="inp1"><br>
+        <div class="jike">
+            <div class=" jk" id="calc">
+                <div class=" "
+                    style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
+                    <h1>SIMPLE CALCULATOR</h1>
+                </div>
+                <div class="pl">
+                    <div class="cl">
+                        <div class="calc">
+                            <input type="text" id="inp1"><br>
 
-                        <input type="text" id="inp2">
+                            <input type="text" id="inp2">
 
-                    </div>
-                    <div class="max">
-                        <span id="symbol"></span>
-                    </div>
-                    <div class="buttons">
-                        <button onclick="plus()" id="plus"><i class="fa-solid fa-plus"></i></button>
-                        <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
-                        <button onclick="divide()"><i class="fa-solid fa-divide"></i></button>
-                        <button onclick="multiply()"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                    <div class="answer">
-                        <span id="answer"></span>
+                        </div>
+                        <div class="max">
+                            <span id="symbol"></span>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="plus()" id="plus"><i class="fa-solid fa-plus"></i></button>
+                            <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
+                            <button onclick="divide()"><i class="fa-solid fa-divide"></i></button>
+                            <button onclick="multiply()"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="answer">
+                            <span id="answer"></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <div class="container grow" id="retire">
-            <div class="mbb">
-                <div class="container-fluid tow">
-                    <h1 class="text-center"
-                        style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
-                        RETIREMENT CALCULATOR</h1>
-                </div>
-                <div style="margin-top: 40px;margin-bottom: 15px;">
-                    <h4 class="text-center"
-                        style="color:white; background: black;text-transform: uppercase; width: fit-content;margin: auto;padding: 10px;border-radius: 20px;">
-                        please input your birthyear</h4>
-                </div>
-                <div class="container-fluid klm">
-
-                    <div class="kop" style="margin-bottom: 25px;">
-                        <input type="text" id="year">
-                        <button onclick="agech()"
-                            style="background: black;color: white;font-size: 30px;border-radius: 20px;">Check</button>
+            <div class="container grow" id="retire">
+                <div class="mbb">
+                    <div class="container-fluid tow">
+                        <h1 class="text-center"
+                            style="margin: auto;width: fit-content;color: white;background: black;border: 6px inset rgb(60, 60, 60);">
+                            RETIREMENT CALCULATOR</h1>
                     </div>
-                </div>
-                <div>
-                    <h3 id="pl" class="text-center"
-                        style="color:white; background: black;text-transform: uppercase; width: fit-content;margin: auto;padding: 10px;border-radius: 20px;visibility: hidden;">
-                    </h3>
+                    <div style="margin-top: 40px;margin-bottom: 15px;">
+                        <h4 class="text-center"
+                            style="color:white; background: black;text-transform: uppercase; width: fit-content;margin: auto;padding: 10px;border-radius: 20px;">
+                            please input your birthyear</h4>
+                    </div>
+                    <div class="container-fluid klm">
+
+                        <div class="kop" style="margin-bottom: 25px;">
+                            <input type="text" id="year">
+                            <button onclick="agech()"
+                                style="background: black;color: white;font-size: 30px;border-radius: 20px;">Check</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 id="pl" class="text-center"
+                            style="color:white; background: black;text-transform: uppercase; width: fit-content;margin: auto;padding: 10px;border-radius: 20px;visibility: hidden;">
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="kunlo">
-            <main id="thecon" style="width: fit-content;">
+            <main id="thecon" class="thecon">
 
-                <h2 style="text-align: center; color:  rgb(8, 87, 184);">LET'S GUESS A NUMBER</h2>
+                <h2 class="h2d">LET'S GUESS A NUMBER</h2>
                 <section id="sect">
-                    <input type="text" id="guess" placeholder="Guess a No. btw 1-30"
-                        style="position: relative;visibility: visible;width: 200px;height: 30px;padding:30px 20px;border-radius: 10px;border: none;">
-                    <button id="button"
-                        style="position: relative;visibility: visible;margin: 15px 0px 0px 0px;padding: 10px 20px;border:none;border-radius: 10px;font-size: 20px; background-color: rgb(8, 87, 184); color: white;">GUESS</button>
-                    <h2 id="output" style="position: relative;text-align: center;"></h2>
-                    <a href="" id="buttonagain"
-                        style="position: absolute;visibility: hidden;margin: auto;border:none;border-radius: 10px;font-size: 20px;background-color: black;"><button
-                            style="padding: 10px 20px;border:none;">PLAY AGAIN</button></a>
+                    <input class="inn" type="text" id="guess" placeholder="Guess a No. btw 10-35">
+                    <button class="btngues" id="button">GUESS</button>
+                    <h2 class="out" id="output"></h2>
+                    <button class="btnagn" id="buttonagain">PLAY
+                        AGAIN</button>
+                    <h3 class="h2d">Highest score:<span id="high">0</span></h3>
 
 
 
@@ -1403,16 +1366,16 @@
         // GREETING ENGINE
 
 
-        let date = new Date().getHours()
-        if (date >= 8 && date <= 11) {
-            alert('Good morning')
-        }
-        else if (date >= 12 && date >= 4) {
-            alert('Good afternoon')
-        }
-        else if (date > 4 && date < 8) {
-            alert('good evening')
-        }
+        // let date = new Date().getHours()
+        // if (date >= 8 && date <= 11) {
+        //     alert('Good morning')
+        // }
+        // else if (date >= 12 && date >= 4) {
+        //     alert('Good afternoon')
+        // }
+        // else if (date > 4 && date < 8) {
+        //     alert('good evening')
+        // }
 
 
 
@@ -1425,7 +1388,7 @@
         function map() {
             let day = new Date().getDay();
             let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday', 'Saturday'];
-            if (day = 0) {
+            if (day == 0) {
                 alert(`Welcome Today Is ${days[day]} go to service`);
             }
             else if (day <= 5 && day != 0) {
@@ -1678,82 +1641,99 @@
         }
 
         // GUESS A NUMBER GAME
-        let backplace;
-        let secretnum;
+        let backplace = document.getElementById('thecon');
+
+
+
         let userguess;
+
         let output;
         let fant;
         let inp;
         let guess = document.getElementById('button');
-        let playagain;
+        let playagain = document.getElementById('buttonagain');
 
         let score = 30;
+        let secretnum = Math.trunc(Math.random() * 25) + 10;
+        console.log(secretnum);
+        let hscore = 0;
+        let highscore = document.getElementById('high');
+
+
+
+
+
 
 
 
         function gameover() {
-            backplace = document.getElementById('thecon');
-            secretnum = 25;
-            userguess = document.getElementById('guess').value;
+
+            // secretnum = Math.trunc(Math.random() * 30) + 1;
+
+
             inp = document.getElementById('guess');
             output = document.getElementById('output');
             fant = document.getElementById('sect');
             guess = document.getElementById('button');
-            playagain = document.getElementById('buttonagain');
+
 
 
             score = score - 6;
+            console.log(score);
+
             if (score == 0) {
                 backplace.style.backgroundColor = 'red';
                 inp.style.visibility = 'hidden';
                 inp.style.position = 'absolute';
                 guess.style.visibility = 'hidden';
                 guess.style.position = 'absolute';
-                output.innerHTML = 'GAME OVER';
+                output.innerHTML = `GAME OVER <br> the number was "${secretnum}" `;
                 playagain.style.visibility = 'visible';
                 playagain.style.position = 'relative';
             }
         }
+        
+
 
         guess.addEventListener('click', () => {
-            backplace = document.getElementById('thecon');
-            secretnum = 25;
-            playagain = document.getElementById('buttonagain');
+
+
+
+
+
+
+
             userguess = document.getElementById('guess').value;
             output = document.getElementById('output');
             inp = document.getElementById('guess');
-            if (!userguess || isNaN(userguess)) {
+            if (!userguess || isNaN(userguess) || userguess < 10 || userguess > 35) {
 
-                output.innerHTML = 'pls input a guess';
+                output.innerHTML = '<h2><span style="color:red;">Guess invalid</span> <br> guess btw(10-35)</h2>';
                 output.style.color = 'orange';
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'hidden';
                 playagain.style.position = 'absolute';
+                document.getElementById('guess').value = "";
                 gameover();
 
             }
-            else if (userguess < 1 || userguess > 30) {
-                output.innerHTML = '<h2><span style="color:red;">Out of range</span> <br> guess btw(1-30)</h2>';
-                output.style.color = 'orange';
-                output.style.fontSize = '25px';
-                playagain.style.visibility = 'hidden';
-                playagain.style.position = 'absolute';
-                gameover();
-            }
-            else if (userguess <= 24) {
+
+            else if (userguess < secretnum) {
                 output.innerHTML = 'Your guess is too low';
                 output.style.color = 'gold';
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'hidden';
                 playagain.style.position = 'absolute';
+                document.getElementById('guess').value = ""
                 gameover();
             }
-            else if (userguess >= 26) {
+            else if (userguess > secretnum) {
                 output.innerHTML = 'Your guess is too high';
                 output.style.color = 'red';
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'hidden';
                 playagain.style.position = 'absolute';
+                document.getElementById('guess').value = "";
                 gameover();
             }
 
@@ -1763,16 +1743,47 @@
                 inp.style.position = 'absolute';
                 guess.style.visibility = 'hidden';
                 guess.style.position = 'absolute';
-                output.innerHTML = 'you are correct';
+                output.innerHTML = `you are correct <br> the number was "${secretnum}" `;
                 output.style.color = 'green';
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'visible';
                 playagain.style.position = 'relative';
                 playagain.style.margin = 'auto';
                 backplace.style.backgroundColor = 'lightgreen';
+                if (score > hscore) {
+                    highscore.innerHTML = `${score}`;
+
+                }
+
+
             }
 
+
         })
+
+       
+        playagain.addEventListener('click', () => {
+            score=30;
+           
+            secretnum = Math.trunc(Math.random() * 25) + 10;
+            console.log(secretnum);
+            backplace.style.backgroundColor = 'rgb(81, 81, 81)';
+            inp.style.visibility = 'visible';
+            inp.style.position = 'relative';
+            guess.style.visibility = 'visible';
+            guess.style.position = 'relative';
+            output.innerHTML = '';
+            document.getElementById('guess').value = "";
+            output.style.color = '';
+            output.style.fontSize = '';
+            playagain.style.visibility = 'hidden';
+            playagain.style.position = 'absolute';
+
+            
+
+
+        })
+
 
 
 
