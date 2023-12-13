@@ -46,8 +46,12 @@
 
 
     <script>
-        let a=prompt('what year where u born');
-        let k= new Date().getfullyear();
+        // let a=prompt('what year where u born');
+        // let k= new Date().getfullyear();
+
+        for(let i =0; i<=10; i++){
+            document.write(`number ${i}:<br>`)
+          }
 
 
         
@@ -75,39 +79,39 @@
 
 
 
-        function load() {
-            let age = document.getElementById('myage').value;
-            let apply;
+        // function load() {
+        //     let age = document.getElementById('myage').value;
+        //     let apply;
 
 
-            if (age == "") {
-                apply = 'pls input a value'
-            }
-            else if (age < 18) {
-                apply = 'you not old enough'
-
-
-
-            }
-
-
-            else if (age > 18 && age < 25) {
-                apply = 'you avergely old enough'
+        //     if (age == "") {
+        //         apply = 'pls input a value'
+        //     }
+        //     else if (age < 18) {
+        //         apply = 'you not old enough'
 
 
 
-            }
-
-            else if (age > 25) {
-                apply = 'you are old enough young'
+        //     }
 
 
-            }
-            else {
-                apply = 'pls input a digital value to check if u can try'
-            }
-            document.getElementById('result').innerHTML = apply + " " + 'to apply for the job';
-        }
+        //     else if (age > 18 && age < 25) {
+        //         apply = 'you avergely old enough'
+
+
+
+        //     }
+
+        //     else if (age > 25) {
+        //         apply = 'you are old enough young'
+
+
+        //     }
+        //     else {
+        //         apply = 'pls input a digital value to check if u can try'
+        //     }
+        //     document.getElementById('result').innerHTML = apply + " " + 'to apply for the job';
+        // }
 
 
         // let a = prompt("how old is nigeria");

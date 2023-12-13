@@ -146,6 +146,16 @@ _____________________________
           math method
           Math.random(),
 
+          loop
+          for(let i =0; i<=10; i++){
+            console.log(i)
+          }
+          
+
+          for loop
+          while loop
+          do -- while loop
+
         
 
 

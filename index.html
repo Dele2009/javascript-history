@@ -379,7 +379,11 @@
 
         .h2d {
             text-align: center;
-            color: rgb(16, 6, 103);
+            color: rgb(33, 22, 127);
+        }
+
+        .h3d {
+            margin-top: 25px;
         }
 
         .inn {
@@ -434,12 +438,79 @@
             color: rgba(0, 0, 0, 0.863);
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+        .invest{
+            animation: invest 7s  ease-in-out 0s infinite alternate;
+            padding: 150px 0px;
+            border-radius: 30px;
+            margin-top:60px;
+        }
+        @keyframes invest {
+            0%{
+                background-image: url(inves1.jfif);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+            }
+            50%{
+                background-image: url(inves2.jfif);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+            }
+            100%{
+                background-image: url(inves3.jfif);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+
+            }
+            
+        }
+        .invest-cal{
+            margin:auto;
+            display:grid;
+            place-items: center;
+           
+        }
+        .mag{
+            margin: 10px 0px;
+            display: grid;
+            place-items:center;
+        }
+       
+        .invest-cal input,select{
+            margin:auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #results{
+           margin-top: 40px;
+           visibility: hidden;
+           position: absolute;
+           display: grid;
+            place-items:center;
+          
+        }
+        #months,#amount,#btn,#btn2{
+            padding: 9px 20px;
+            border-radius: 10px;
+        }
+        #btn,#btn2{
+            border:none;
+            background:  rgb(8, 87, 184);
+            color:white;
+            font-size:20px;
+            margin-top:20px;
+        }
 
 
 
 
-
-        @media screen and (max-width:870px) {
+       
+        @media screen and (max-width:1200px) {
             body {
                 padding: 60px 0px 70px 0px;
 
@@ -656,7 +727,7 @@
 <body>
     <section class="flowp ">
 
-        <nav style="" id="max">
+        <nav id="max">
             <a href="#javahis" class="">
 
                 <p>HISTORY OF JAVASCRIPT</p>
@@ -699,6 +770,10 @@
             <a href="#thecon" class="">
 
                 <p>GUESS A NUMBER</p>
+            </a>
+            <a href="#invet" class="">
+
+                <p>INVESTMENT CALCULATOR</p>
             </a>
         </nav>
 
@@ -774,6 +849,10 @@
                     <a href="#thecon" class="">
 
                         <p>GUESS A NUMBER</p>
+                    </a>
+                    <a href="#invet" class="">
+
+                        <p>INVESMENT CALCULATOR</p>
                     </a>
                 </nav>
 
@@ -1348,7 +1427,7 @@
                     <h2 class="out" id="output"></h2>
                     <button class="btnagn" id="buttonagain">PLAY
                         AGAIN</button>
-                    <h3 class="h2d">Highest score:<span id="high">0</span></h3>
+                    <h3 class="h2d h3d">Highest score: <span id="high">0</span></h3>
 
 
 
@@ -1356,6 +1435,69 @@
 
 
 
+
+            </main>
+        </div>
+
+        <div class="invest" id="invet">
+            <main class="thecon">
+
+                <h2 class="h2d">INVESTMENT CALCULATOR</h2>
+                <section>
+                    <div class="invest-cal">
+                        <div class="invest-cal-inn">
+                            <div class="mag" id="mam">
+                                <label for="amount" id="inputss"></label>
+                                <input type="text" placeholder="Enter Amount" id="amount" name="amount" required>
+                                
+                            </div>
+                            <div class="mag" id="mam">
+                                <label for="duration" id="selectss"></label>
+                                <select name="duration" id="months" required>
+                                    <option selected disabled value="0">Select Duration</option>
+                                    <option value="1">1 Month</option>
+                                    <option value="2">2 Months</option>
+                                    <option value="3">3 Months</option>
+                                    <option value="4">4 Months</option>
+                                    <option value="5">5 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="7">7 Months</option>
+                                    <option value="8">8 Months</option>
+                                    <option value="9">9 Months</option>
+                                    <option value="10">10 Months</option>
+                                    <option value="11">11 Months</option>
+                                    <option value="12">12 Months</option>
+                                </select>
+                               
+                            </div>
+                           
+                            
+                            
+                        </div>
+                        <div>
+                            <button id="btn">Calculate</button>
+                        </div>
+
+
+                        <div id="results" style=""> 
+                            <div style="background:rgb(95, 95, 95) ;padding: 25px;border-radius: 20px;">
+                                <h4 class="h2d" style="text-align: left;" >Pricipal: <span id="respri">0</span></h4>
+                                <h4 class="h2d" style="text-align: left;" >Duration(Months): <span id="resdur">0</span><h4>
+                                <h4 class="h2d" style="text-align: left;" >Rate: <span id="resrat">15</span>%</h4>
+                                <h4 class="h2d" style="text-align: left;" >Amount: <span id="resam">0</span> </h4>
+                            </div>
+                            <div>
+                                <button id="btn2">Reset</button>
+                            </div>
+
+
+
+                        </div>
+                       
+                    </div>
+                </section>
+
+               
 
             </main>
         </div>
@@ -1452,7 +1594,7 @@
         // GUESS NIGERIA AGE ENGINE
         function load() {
             let age = +(document.getElementById('myage').value);
-            // age = Number(age)
+           
             switch (age) {
 
                 case 56:
@@ -1490,12 +1632,9 @@
 
 
         // CALCULATOR ENGINE
+        let a, b, c, d;
 
-        function plus() {
-            let a = +document.getElementById('inp1').value;
-            let b = +document.getElementById('inp2').value;
-            let c = a + b
-            document.getElementById('symbol').innerHTML = `+`;
+        function mistakes() {
             if (isNaN(a) || isNaN(b)) {
                 document.getElementById('answer').innerHTML = `invalid value(s) ❌`;
 
@@ -1507,91 +1646,41 @@
                 document.getElementById('answer').style.color = 'orange';
             }
             else {
-                // let a = +document.getElementById('inp1').value;
-                // let b = +document.getElementById('inp2').value;
-
 
                 document.getElementById('answer').innerHTML = `${c}`;
                 document.getElementById('answer').style.color = 'black';
             }
+        }
+
+        function plus() {
+            a = +document.getElementById('inp1').value;
+            b = +document.getElementById('inp2').value;
+            c = a + b
+            d = document.getElementById('symbol');
+            d.innerHTML = `+`;
+            mistakes()
+
 
         }
         function minus() {
-            let a = document.getElementById('inp1').value;
-            let b = document.getElementById('inp2').value;
-            let c = a - b
-            document.getElementById('symbol').innerHTML = `-`;
-            if (isNaN(a) || isNaN(b)) {
-                document.getElementById('answer').innerHTML = `invalid value(s) ❌`;
 
-                document.getElementById('answer').style.color = 'red';
-
-            }
-            else if (!a || !b) {
-                document.getElementById('answer').innerHTML = `NULL ( Input value(s) ) ✏`;
-
-                document.getElementById('answer').style.color = 'orange';
-            }
-            else {
-                // let a = +document.getElementById('inp1').value;
-                // let b = +document.getElementById('inp2').value;
-
-
-                document.getElementById('answer').innerHTML = `${c}`;
-                document.getElementById('answer').style.color = 'black';
-            }
+            c = a - b
+            d.innerHTML = `-`;
+            mistakes()
 
         }
         function divide() {
-            let a = document.getElementById('inp1').value;
-            let b = document.getElementById('inp2').value;
-            let c = a / b
-            document.getElementById('symbol').innerHTML = `/`;
-            if (isNaN(a) || isNaN(b)) {
-                document.getElementById('answer').innerHTML = `invalid value(s) ❌`;
 
-                document.getElementById('answer').style.color = 'red';
-
-            }
-            else if (!a || !b) {
-                document.getElementById('answer').innerHTML = `NULL ( Input value(s) ) ✏`;
-
-                document.getElementById('answer').style.color = 'orange';
-            }
-            else {
-                // let a = +document.getElementById('inp1').value;
-                // let b = +document.getElementById('inp2').value;
-
-
-                document.getElementById('answer').innerHTML = `${c}`;
-                document.getElementById('answer').style.color = 'black';
-            }
+            c = a / b
+            d.innerHTML = `/`;
+            mistakes()
 
         }
         function multiply() {
-            let a = document.getElementById('inp1').value;
-            let b = document.getElementById('inp2').value;
-            let c = a * b
-            document.getElementById('symbol').innerHTML = `*`;
-            if (isNaN(a) || isNaN(b)) {
-                document.getElementById('answer').innerHTML = `invalid value(s) ❌`;
 
-                document.getElementById('answer').style.color = 'red';
-
-            }
-            else if (!a || !b) {
-                document.getElementById('answer').innerHTML = `NULL ( Input value(s) ) ✏`;
-
-                document.getElementById('answer').style.color = 'orange';
-            }
-            else {
-                // let a = +document.getElementById('inp1').value;
-                // let b = +document.getElementById('inp2').value;
-
-
-                document.getElementById('answer').innerHTML = `${c}`;
-                document.getElementById('answer').style.color = 'black';
-            }
+            c = a * b
+            d.innerHTML = `*`;
+            mistakes()
 
         }
 
@@ -1641,26 +1730,12 @@
         }
 
         // GUESS A NUMBER GAME
-        let backplace = document.getElementById('thecon');
-
-
-
-        let userguess;
-
-        let output;
-        let fant;
-        let inp;
-        let guess = document.getElementById('button');
-        let playagain = document.getElementById('buttonagain');
-
+        let backplace, userguess, output, fant, inp, hscore, highscore;
         let score = 30;
         let secretnum = Math.trunc(Math.random() * 25) + 10;
-        console.log(secretnum);
-        let hscore = 0;
-        let highscore = document.getElementById('high');
-
-
-
+        console.log(`Secrt No-${secretnum}`);
+        let guess = document.getElementById('button');
+        let playagain = document.getElementById('buttonagain');
 
 
 
@@ -1668,18 +1743,13 @@
 
         function gameover() {
 
-            // secretnum = Math.trunc(Math.random() * 30) + 1;
 
 
-            inp = document.getElementById('guess');
-            output = document.getElementById('output');
-            fant = document.getElementById('sect');
-            guess = document.getElementById('button');
 
 
 
             score = score - 6;
-            console.log(score);
+            console.log(` chances-${score}`);
 
             if (score == 0) {
                 backplace.style.backgroundColor = 'red';
@@ -1688,22 +1758,22 @@
                 guess.style.visibility = 'hidden';
                 guess.style.position = 'absolute';
                 output.innerHTML = `GAME OVER <br> the number was "${secretnum}" `;
+                output.style.color = 'gold';
                 playagain.style.visibility = 'visible';
                 playagain.style.position = 'relative';
             }
         }
-        
+
 
 
         guess.addEventListener('click', () => {
+            backplace = document.getElementById('thecon');
+            highscore = document.getElementById('high');
 
-
-
-
-
-
-
+            hscore = 0;
             userguess = document.getElementById('guess').value;
+            fant = document.getElementById('sect');
+            guess = document.getElementById('button');
             output = document.getElementById('output');
             inp = document.getElementById('guess');
             if (!userguess || isNaN(userguess) || userguess < 10 || userguess > 35) {
@@ -1761,12 +1831,14 @@
 
         })
 
-       
+
+        
         playagain.addEventListener('click', () => {
-            score=30;
-           
+
+            score = 30;
+
             secretnum = Math.trunc(Math.random() * 25) + 10;
-            console.log(secretnum);
+            console.log(`Secrt No-${secretnum}`);
             backplace.style.backgroundColor = 'rgb(81, 81, 81)';
             inp.style.visibility = 'visible';
             inp.style.position = 'relative';
@@ -1779,10 +1851,121 @@
             playagain.style.visibility = 'hidden';
             playagain.style.position = 'absolute';
 
-            
+
 
 
         })
+
+
+        let investamt,monthvalue,rate,labr,labs,principal,duration,amount,newvalue,resrate;
+
+
+
+
+        let calcbtn= document.getElementById('btn');
+        let resetbtn= document.getElementById('btn2');
+        let invest=document.querySelector('#amount');
+        let month=document.querySelector('#months');
+        let rtty=document.getElementById('results');
+        let maabb=document.getElementById('mam');
+
+
+        calcbtn.addEventListener('click', ()=>{
+            investamt =+(document.querySelector('#amount').value);
+            monthvalue = +(document.querySelector('#months').value);
+            labr=document.querySelector('#inputss');
+            labs=document.querySelector('#selectss');
+             
+
+
+            principal=document.getElementById('respri');
+            duration=document.getElementById('resdur');
+            amount=document.getElementById('resam');
+            resrate=document.getElementById('resrat');
+            rate=+(0.15);
+            console.log(monthvalue);
+            intestvalue=investamt*monthvalue*rate;
+            console.log(intestvalue);
+           
+           amountvalue=intestvalue+investamt;
+                     
+           console.log(amountvalue);
+
+           
+         
+           
+            if(!investamt ||isNaN(investamt) ){
+                labr.innerHTML=`invalid input`;
+                labr.style.color=`red`;
+                labr.style.visibility='visible';
+                labr.style.position='relative';
+                
+               
+                
+            }
+           
+           
+            else{
+               
+                principal.innerHTML=` &#8358;${investamt}`;
+                duration.innerHTML=`${monthvalue}`;
+                amount.innerHTML=`&#8358;${amountvalue}`;
+                document.querySelector('#amount').value='';
+                document.querySelector('#months').value='0';
+                labr.style.visibility='hidden';
+                labr.style.position='absolute';
+               
+                invest.style.visibility='hidden';
+                invest.style.position='absolute';
+                month.style.visibility='hidden';
+                month.style.position='absolute';
+               
+                rtty.style.visibility='visible';
+                rtty.style.position='relative';
+                rtty.style.marginTop='-25px';
+                calcbtn.style.visibility='hidden';
+                calcbtn.style.position='absolute';
+                resetbtn.style.visibility='visible';
+                resetbtn.style.position='relative';
+               
+
+
+
+
+
+               
+            }
+           
+
+
+
+            
+        })
+
+        resetbtn.addEventListener('click', ()=>{{
+            labr.style.visibility='hidden';
+            labr.style.position='absolute';
+            invest.style.visibility='visible';
+            invest.style.position='relative';
+            month.style.visibility='visible';
+            month.style.position='relative';
+            rtty.style.visibility='hidden';
+            rtty.style.position='absolute';
+            calcbtn.style.visibility='visible';
+            calcbtn.style.position='relative';
+            resetbtn.style.visibility='hidden';
+            resetbtn.style.position='absolute';
+        }})
+
+        // let monthvalue = function(){
+           
+        //};
+       
+
+        
+
+
+
 
 
 
