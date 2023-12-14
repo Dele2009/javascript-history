@@ -1,0 +1,682 @@
+.body {
+    padding: 0px 0px 100px 25%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+.offcanvas {
+    visibility: hidden;
+    position: absolute;
+}
+
+.flowp table {
+    margin: auto;
+    border-radius: 10px;
+}
+
+.flowp thead {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.flowp thead tr {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.flowp thead td {
+    padding: 20px;
+}
+
+.flowp tbody td {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    color: rgb(66, 64, 64);
+    padding: 20px;
+}
+
+.flowp tbody tr:nth-child(odd) {
+    background: grey;
+}
+
+.flowp tbody tr:nth-child(even) {
+    background: rgb(221, 221, 221);
+
+}
+
+.flowp tbody tr:nth-child(odd) hr {
+    color: rgb(235, 235, 235);
+
+}
+
+.flowp #max {
+    background: black;
+    width: fit-content;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+
+
+.flowp #max a {
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    font-size: 20px;
+
+}
+
+.flowp #max .p {
+    background: grey;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.flowp #max .p:hover{
+    background: rgb(67, 67, 67);
+}
+
+.activelink{
+    background: rgb(67, 67, 67);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.flowp #map {
+    width: fit-content;
+
+    top: 0;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+}
+
+.flowp #fay {
+    width: 80%;
+    margin: auto;
+}
+
+.flowp #jay {
+    width: 80%;
+}
+
+.flowp #jay img {
+    width: 80%;
+}
+
+.flowp #mk td {
+    font-size: 15px;
+}
+
+.flowp #mk img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.flowp #kl {
+    width: 250px;
+    height: 100px;
+}
+
+/* .flowp #ul {
+    width: 250px;
+    height: 200px;
+} */
+
+/* .flowp .muy{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+    width: 100%;
+    margin: auto;
+} */
+
+.flowp .pol {
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+    width: 100%;
+}
+
+.flowp #mal:active {
+    transform: scale(0.9);
+}
+
+.flowp .small-nav {
+    visibility: hidden;
+    position: absolute;
+}
+
+.flowp #Array {
+    height: 320px;
+}
+
+.flowp #oper {
+    margin-top: 0;
+}
+
+
+
+
+
+
+/* CAULATOR AND RITEMENT */
+
+.mike .pl {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mike .cl {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    background: rgb(52, 52, 52);
+    width: fit-content;
+    margin: auto;
+    padding: 60px;
+    border-radius: 20px;
+    border: 10px inset black;
+}
+
+.mike .jk {
+    margin-top: 40px;
+}
+
+.jike input {
+    border: 3px solid black;
+    margin: 0px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgb(188, 188, 188);
+    outline: none;
+}
+
+.mike .cl span {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mike .buttons {
+    display: grid;
+ 
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    transform: rotate(45deg);
+    margin-top: 40px;
+}
+
+.mike .buttons button {
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    background: rgb(188, 188, 188);
+
+}
+
+
+.mike .buttons button:hover {
+    background: rgb(113, 113, 113);
+}
+
+.mike .buttons button:active {
+    transform: scale(0.9);
+    transition: all 2.s ease;
+}
+
+.mike .fa-solid {
+    font-size: 25px;
+    transform: rotate(135deg);
+}
+
+.mike .max {
+    position: absolute;
+    margin-bottom: 230px;
+   
+}
+
+.mike #symbol {
+
+    color: rgb(0, 0, 0);
+    padding: 25px;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+
+    border: 3px solid black;
+    background: rgb(188, 188, 188);
+}
+
+.mike #answer {
+    padding: 10px;
+    color: black;
+    background: white;
+    border-radius: 10px;
+    margin: 45px 0px 0px 0px;
+    font-weight: bolder;
+    background: rgb(188, 188, 188);
+}
+
+.mike .klm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mike .kop {
+    display: grid;
+
+
+}
+
+.mike .kop button {
+    border: 2px solid gray;
+
+}
+
+.mike .grow {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+
+}
+
+.mike .mbb {
+
+    padding: 35px;
+    border-radius: 20px;
+    background: rgb(81, 81, 81);
+    width: fit-content;
+
+}
+
+.mike .tow {
+    margin: auto;
+}
+
+
+
+/* GUESS MY NO */
+.kunlo {
+    background-image: url(bAC.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: body 7s ease-in-out 0s infinite alternate;
+    padding: 150px 0px;
+    border-radius: 30px;
+}
+
+@keyframes body {
+    from {
+        background-image: url(bAC.jpg);
+    }
+
+    to {
+        background-image: url(bac2.jpg);
+    }
+}
+
+.thecon {
+    background-color: rgb(81, 81, 81);
+    margin: auto;
+    padding: 50px 25px;
+    border-radius: 25px;
+    border: 9px solid rgb(31, 31, 31);
+    width: fit-content;
+}
+
+#sect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.h2d {
+    text-align: center;
+    color: rgb(33, 22, 127);
+}
+
+.h3d {
+    margin-top: 25px;
+}
+
+.inn {
+    position: relative;
+    visibility: visible;
+    width: 200px;
+    height: 30px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.btngues {
+    position: relative;
+    visibility: visible;
+    margin: 15px 0px 0px 0px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(8, 87, 184);
+    color: white;
+    width: fit-content;
+}
+
+.btnagn {
+    position: absolute;
+    visibility: hidden;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+
+    padding: 10px 20px;
+    border: none;
+    width: fit-content;
+}
+
+.out {
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.863);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.invest{
+    animation: invest 7s  ease-in-out 0s infinite alternate;
+    padding: 150px 0px;
+    border-radius: 30px;
+    margin-top:60px;
+}
+@keyframes invest {
+    0%{
+        background-image: url(inves1.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+    }
+    50%{
+        background-image: url(inves2.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+    }
+    100%{
+        background-image: url(inves3.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+    }
+    
+}
+.invest-cal{
+    margin:auto;
+    display:grid;
+    place-items: center;
+   
+}
+.mag{
+    margin: 10px 0px;
+    display: grid;
+    place-items:center;
+}
+
+.invest-cal input,select{
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#results{
+   margin-top: 40px;
+   visibility: hidden;
+   position: absolute;
+   display: grid;
+    place-items:center;
+  
+}
+#months,#amount,#btn,#btn2{
+    padding: 9px 20px;
+    border-radius: 10px;
+}
+#btn,#btn2{
+    border:none;
+    background:  rgb(8, 87, 184);
+    color:white;
+    font-size:20px;
+    margin-top:20px;
+}
+
+.h4d{
+    border-bottom: 1px solid  rgb(54, 54, 54);
+}
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    .body {
+        padding: 60px 0px 70px 0px;
+
+    }
+
+    .offcanvas {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+
+    }
+
+    .offcanvas p {
+        font-size: 20px;
+        padding: 0px 5px;
+    }
+
+    .flowp {
+        overflow-x: hidden;
+    }
+
+    .flowp #max {
+        visibility: hidden;
+        position: absolute;
+        height: 0%;
+        width: 0px;
+    }
+
+    .flowp #map {
+        width: 100%;
+
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+
+        visibility: visible;
+        position: relative;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        z-index: 5;
+
+
+    }
+
+    .flowp #map a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        margin: 20px 0px;
+
+    }
+
+    .flowp #map p {
+        background: grey;
+        padding: 10px 0px 0px 0px;
+        border-radius: 10px;
+    }
+
+    .flowp #fay {
+        width: 100%;
+        margin: auto;
+    }
+
+    .flowp #jay {
+        width: 100%;
+    }
+
+    .flowp #jay img {
+        width: 100%;
+    }
+
+   
+
+    .flowp #kl {
+        width: 220px;
+        height: 180px;
+        margin: auto;
+
+        overflow-x: scroll;
+    }
+
+    .flowp #kl img {
+        width: 250px;
+        height: 180px;
+        margin: auto;
+    }
+
+    .flowp .ul img {
+        width: 200px;
+        height: 180px;
+        margin: auto;
+    }
+
+
+
+
+
+    .flowp .pol {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin: 0;
+    }
+
+    .flowp .small-nav {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+    }
+
+    .flowp #javahis {
+       
+        margin: auto;
+    }
+
+
+   
+
+   
+
+    .jop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flowp #oper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .flowp #Array {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 00px;
+        height: 420px;
+    }
+
+    .mike {
+        overflow-x: hidden;
+    }
+
+
+
+}
+
+@media screen and (max-width:430px) {
+    .flowp #javahis h1 {
+       
+        margin: auto;
+        font-size: 40px;
+    }
+
+    .oppl1 {
+        width: 300px;
+        overflow-x: scroll;
+        margin: auto;
+
+    }
+
+    .oppl1 .tab {
+        width: 300px;
+
+    }
+
+    .kunlo {
+        background-image: url(bAC.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: body 7s ease-in-out 0s infinite alternate;
+        padding: 100px 20px;
+        border-radius: 30px;
+    }
+}

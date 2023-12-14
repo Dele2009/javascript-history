@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript/page5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="po.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Delius+Unicase&family=Lemonada&family=Lobster&family=Lobster+Two:wght@700&family=Nosifer&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <section class="flowp ">
+
+        <nav id="max">
+            <a href="index.html" class="">
+
+                <p class="p">DOCUMENTATION (1)</p>
+            </a>
+            <a href="page2.html" class="">
+
+                <p class="p">DOCUMENTATION (2)</p>
+            </a>
+            <a href="page3.html" class="">
+
+                <p class="p">OPERATORS&<br>STATEMENTS PROJECT</p>
+            </a>
+            <a href="page4.html" class="">
+
+                <p class="p">SIMPLE CALCULATOR&<br>RETIREMENT CALCULATOR</p>
+            </a>
+            <a href="page5.html" class="">
+
+                <p class="activelink">NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+            </a>
+
+        </nav>
+
+        <nav style="display: flex;justify-content: flex-start;align-items: center;width: 100%;background: black;z-index: 9;"
+            class="small-nav">
+
+            <button type="button" class="border-0" data-bs-toggle="offcanvas" data-bs-target="#offcan"
+                style="font-weight: bold;background: none;margin-right: 15px;">
+
+
+
+                <i class="fa-solid fa-bars" style="font-size: 30px;color: white"></i>
+
+
+            </button>
+
+            <h1 style="color: white;font-size: 35px;">JAVASCRIPT<h1>
+
+
+        </nav>
+
+        <div class="offcanvas offcanvas-top m-0 w-100" id="offcan" aria-labelledby="offcanvasRightLabel">
+
+            <div class="offcanvas-header d-flex justify-content-end">
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                    style="color: white;"></button>
+            </div>
+            <div class="offcanvas-body" style="background: black;">
+                <nav style="background:; " id="map">
+                    <a href="index.html" class="">
+
+                        <p>DOCUMENTATION (1)</p>
+                    </a>
+                    <a href="page2.html" class="">
+
+                        <p>DOCUMENTATION (2)</p>
+                    </a>
+                    <a href="page3.html" class="">
+
+                        <p>OPERATORS&<br>STATEMENTS PROJECT</p>
+                    </a>
+                    <a href="page4.html" class="">
+
+                        <p>SIMPLE CALCULATOR&<br>RETIREMENT CALCULATOR</p>
+                    </a>
+                    <a href="page5.html" class="">
+
+                        <p>NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+                    </a>
+                </nav>
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <div class="container mike">
+        <div class="kunlo">
+            <main id="thecon" class="thecon">
+
+                <h2 class="h2d">LET'S GUESS A NUMBER</h2>
+                <section id="sect">
+                    <input class="inn" type="text" id="guess" placeholder="Guess a No. btw 10-35">
+                    <button class="btngues" id="button">GUESS</button>
+                    <h2 class="out" id="output"></h2>
+                    <button class="btnagn" id="buttonagain">PLAY
+                        AGAIN</button>
+                    <h3 class="h2d h3d">Highest score: <span id="high">0</span></h3>
+
+
+
+                </section>
+
+
+
+
+            </main>
+        </div>
+
+        <div class="invest" id="invet">
+            <main class="thecon">
+
+                <h2 class="h2d">INVESTMENT CALCULATOR</h2>
+                <section>
+                    <div class="invest-cal">
+                        <div class="invest-cal-inn">
+                            <div class="mag" id="mam">
+                                <label for="amount" id="inputss"></label>
+                                <input type="text" placeholder="Enter Amount" id="amount" name="amount" required>
+
+                            </div>
+                            <div class="mag" id="mam">
+                                <label for="duration" id="selectss"></label>
+                                <select name="duration" id="months" required>
+                                    <option selected disabled value="0">Select Duration</option>
+                                    <option value="1">1 Month</option>
+                                    <option value="2">2 Months</option>
+                                    <option value="3">3 Months</option>
+                                    <option value="4">4 Months</option>
+                                    <option value="5">5 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="7">7 Months</option>
+                                    <option value="8">8 Months</option>
+                                    <option value="9">9 Months</option>
+                                    <option value="10">10 Months</option>
+                                    <option value="11">11 Months</option>
+                                    <option value="12">12 Months</option>
+                                </select>
+
+                            </div>
+
+
+
+                        </div>
+                        <div>
+                            <button id="btn">Calculate</button>
+                        </div>
+
+
+                        <div id="results">
+                            <div style="background:rgb(95, 95, 95) ;padding: 25px;border-radius: 20px;">
+                                <h4 class="h2d h4d" style="text-align: left;">Pricipal: <span id="respri">0</span></h4>
+                                <h4 class="h2d h4d" style="text-align: left;">Duration: <span id="resdur">0</span>
+                                    <h4>
+                                        <h4 class="h2d h4d" style="text-align: left;">Rate: <span id="resrat">15</span>%
+                                        </h4>
+                                        <h4 class="h2d h4d" style="text-align: left;">Interest: <span id="resint">0</span>
+                                        </h4>
+                                        <h4 class="h2d" style="text-align: left;">Amount: <span id="resam">0</span>
+                                        </h4>
+                            </div>
+                            <div>
+                                <button id="btn2">Reset</button>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+            </main>
+        </div>
+    </div>
+
+
+    <script>
+        let backplace, userguess, output, fant, inp, hscore, highscore;
+        let score = 30;
+        let secretnum = Math.trunc(Math.random() * 25) + 10;
+        console.log(`Secrt No-${secretnum}`);
+        let guess = document.getElementById('button');
+        let playagain = document.getElementById('buttonagain');
+
+
+
+
+
+        function gameover() {
+
+
+
+
+
+
+            score = score - 6;
+            console.log(` chances-${score}`);
+
+            if (score == 0) {
+                backplace.style.backgroundColor = 'red';
+                inp.style.visibility = 'hidden';
+                inp.style.position = 'absolute';
+                guess.style.visibility = 'hidden';
+                guess.style.position = 'absolute';
+                output.innerHTML = `GAME OVER <br> the number was "${secretnum}" `;
+                output.style.color = 'gold';
+                playagain.style.visibility = 'visible';
+                playagain.style.position = 'relative';
+            }
+        }
+
+
+
+        guess.addEventListener('click', () => {
+            backplace = document.getElementById('thecon');
+            highscore = document.getElementById('high');
+
+            hscore = 0;
+            userguess = document.getElementById('guess').value;
+            fant = document.getElementById('sect');
+            guess = document.getElementById('button');
+            output = document.getElementById('output');
+            inp = document.getElementById('guess');
+            if (!userguess || isNaN(userguess) || userguess < 10 || userguess > 35) {
+
+                output.innerHTML = '<h2><span style="color:red;">Guess invalid</span> <br> guess btw(10-35)</h2>';
+                output.style.color = 'orange';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                document.getElementById('guess').value = "";
+                gameover();
+
+            }
+
+            else if (userguess < secretnum) {
+                output.innerHTML = 'Your guess is too low';
+                output.style.color = 'gold';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                document.getElementById('guess').value = ""
+                gameover();
+            }
+            else if (userguess > secretnum) {
+                output.innerHTML = 'Your guess is too high';
+                output.style.color = 'red';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'hidden';
+                playagain.style.position = 'absolute';
+                document.getElementById('guess').value = "";
+                gameover();
+            }
+
+
+            else if (userguess == secretnum) {
+                inp.style.visibility = 'hidden';
+                inp.style.position = 'absolute';
+                guess.style.visibility = 'hidden';
+                guess.style.position = 'absolute';
+                output.innerHTML = `you are correct <br> the number was "${secretnum}" `;
+                output.style.color = 'green';
+                output.style.fontSize = '25px';
+                playagain.style.visibility = 'visible';
+                playagain.style.position = 'relative';
+                playagain.style.margin = 'auto';
+                backplace.style.backgroundColor = 'lightgreen';
+                if (score > hscore) {
+                    highscore.innerHTML = `${score}`;
+
+                }
+
+
+            }
+
+
+        })
+
+
+
+        playagain.addEventListener('click', () => {
+
+            score = 30;
+
+            secretnum = Math.trunc(Math.random() * 25) + 10;
+            console.log(`Secrt No-${secretnum}`);
+            backplace.style.backgroundColor = 'rgb(81, 81, 81)';
+            inp.style.visibility = 'visible';
+            inp.style.position = 'relative';
+            guess.style.visibility = 'visible';
+            guess.style.position = 'relative';
+            output.innerHTML = '';
+            document.getElementById('guess').value = "";
+            output.style.color = '';
+            output.style.fontSize = '';
+            playagain.style.visibility = 'hidden';
+            playagain.style.position = 'absolute';
+
+
+
+
+        })
+
+
+        let investamt, intestvalround, amountvalround, monthvalue, rate, labr, labs, principal, duration, amount, resintr, newvalue, resrate;
+
+
+
+
+        let calcbtn = document.getElementById('btn');
+        let resetbtn = document.getElementById('btn2');
+        let invest = document.querySelector('#amount');
+        let month = document.querySelector('#months');
+        let rtty = document.getElementById('results');
+        let maabb = document.getElementById('mam');
+
+
+        calcbtn.addEventListener('click', () => {
+            investamt = +(document.querySelector('#amount').value);
+            monthvalue = +(document.querySelector('#months').value);
+            labr = document.querySelector('#inputss');
+            labs = document.querySelector('#selectss');
+
+
+
+            principal = document.getElementById('respri');
+            duration = document.getElementById('resdur');
+            amount = document.getElementById('resam');
+            resintr = document.getElementById('resint');
+            resrate = document.getElementById('resrat');
+            rate = +(0.15);
+            console.log(monthvalue);
+            intestvalue = investamt * monthvalue * rate;
+            intestvalround = Math.round(intestvalue);
+            console.log(intestvalue);
+
+            amountvalue = intestvalround + investamt;
+            //    amountvalround=Math.round(amountvalue)
+
+            console.log(amountvalue);
+
+
+
+
+            if (!investamt || isNaN(investamt)) {
+                labr.innerHTML = `invalid input`;
+                labr.style.color = `red`;
+                labr.style.visibility = 'visible';
+                labr.style.position = 'relative';
+
+
+
+            }
+
+
+            else {
+
+                principal.innerHTML = ` &#8358;${investamt}`;
+                duration.innerHTML = `${monthvalue}Months`;
+                amount.innerHTML = `&#8358;${amountvalue}`;
+                resintr.innerHTML = `&#8358;${intestvalround}`;
+                document.querySelector('#amount').value = '';
+                document.querySelector('#months').value = '0';
+                labr.style.visibility = 'hidden';
+                labr.style.position = 'absolute';
+
+                invest.style.visibility = 'hidden';
+                invest.style.position = 'absolute';
+                month.style.visibility = 'hidden';
+                month.style.position = 'absolute';
+
+                rtty.style.visibility = 'visible';
+                rtty.style.position = 'relative';
+                rtty.style.marginTop = '-25px';
+                calcbtn.style.visibility = 'hidden';
+                calcbtn.style.position = 'absolute';
+                resetbtn.style.visibility = 'visible';
+                resetbtn.style.position = 'relative';
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+        })
+
+        resetbtn.addEventListener('click', () => {
+            {
+                labr.style.visibility = 'hidden';
+                labr.style.position = 'absolute';
+                invest.style.visibility = 'visible';
+                invest.style.position = 'relative';
+                month.style.visibility = 'visible';
+                month.style.position = 'relative';
+                rtty.style.visibility = 'hidden';
+                rtty.style.position = 'absolute';
+                calcbtn.style.visibility = 'visible';
+                calcbtn.style.position = 'relative';
+                resetbtn.style.visibility = 'hidden';
+                resetbtn.style.position = 'absolute';
+            }
+        })
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
