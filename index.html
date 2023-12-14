@@ -1484,6 +1484,7 @@
                                 <h4 class="h2d" style="text-align: left;" >Pricipal: <span id="respri">0</span></h4>
                                 <h4 class="h2d" style="text-align: left;" >Duration(Months): <span id="resdur">0</span><h4>
                                 <h4 class="h2d" style="text-align: left;" >Rate: <span id="resrat">15</span>%</h4>
+                                <h4 class="h2d" style="text-align: left;" >Interest: <span id="resint">0</span></h4>
                                 <h4 class="h2d" style="text-align: left;" >Amount: <span id="resam">0</span> </h4>
                             </div>
                             <div>
@@ -1857,7 +1858,7 @@
         })
 
 
-        let investamt,monthvalue,rate,labr,labs,principal,duration,amount,newvalue,resrate;
+        let investamt,amountvalround,monthvalue,rate,labr,labs,principal,duration,amount,resintr,newvalue,resrate;
 
 
 
@@ -1881,6 +1882,7 @@
             principal=document.getElementById('respri');
             duration=document.getElementById('resdur');
             amount=document.getElementById('resam');
+            resintr=document.getElementById('resint');
             resrate=document.getElementById('resrat');
             rate=+(0.15);
             console.log(monthvalue);
@@ -1888,6 +1890,7 @@
             console.log(intestvalue);
            
            amountvalue=intestvalue+investamt;
+           amountvalround=Math.round(amountvalue)
                      
            console.log(amountvalue);
 
@@ -1909,7 +1912,8 @@
                
                 principal.innerHTML=` &#8358;${investamt}`;
                 duration.innerHTML=`${monthvalue}`;
-                amount.innerHTML=`&#8358;${amountvalue}`;
+                amount.innerHTML=`&#8358;${amountvalround}`;
+                resintr.innerHTML=`&#8358;${intestvalue}`;
                 document.querySelector('#amount').value='';
                 document.querySelector('#months').value='0';
                 labr.style.visibility='hidden';
