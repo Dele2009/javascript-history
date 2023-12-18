@@ -38,7 +38,7 @@
             </a>
             <a href="page5.html" class="">
 
-                <p class="activelink">NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+                <p class="activelink">NUMBER GAME&<br>INVESTMENT CALCULATOR&<br>PRIME NUMBER CHECKER</p>
             </a>
 
         </nav>
@@ -61,7 +61,7 @@
 
         </nav>
 
-        <div class="offcanvas offcanvas-top m-0 w-100" id="offcan" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-top m-0 w-100 h-100" id="offcan" aria-labelledby="offcanvasRightLabel">
 
             <div class="offcanvas-header d-flex justify-content-end">
 
@@ -88,7 +88,7 @@
                     </a>
                     <a href="page5.html" class="">
 
-                        <p>NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+                        <p>NUMBER GAME&<br>INVESTMENT CALCULATOR&<br>PRIME NUMBER CHECKER</p>
                     </a>
                 </nav>
 
@@ -186,7 +186,8 @@
                                     <h4>
                                         <h4 class="h2d h4d" style="text-align: left;">Rate: <span id="resrat">15</span>%
                                         </h4>
-                                        <h4 class="h2d h4d" style="text-align: left;">Interest: <span id="resint">0</span>
+                                        <h4 class="h2d h4d" style="text-align: left;">Interest: <span
+                                                id="resint">0</span>
                                         </h4>
                                         <h4 class="h2d" style="text-align: left;">Amount: <span id="resam">0</span>
                                         </h4>
@@ -203,6 +204,23 @@
                 </section>
 
 
+
+            </main>
+        </div>
+
+        <div class="prime">
+            <main class="thecon">
+                <h2 class="h2d">PRIME NUMBER CHECKER</h2>
+
+                <section class="invest-cal">
+                    <div id="calpp">
+                        <input type="text" id="primeinp" placeholder="Input No btw(60-150)">
+                        <button id="proced">check</button>
+                    </div>
+                    <div id="calpp">
+                        <span id="primeout" style="font-size: 20px;margin-top:20px;"></span>
+                    </div>
+                </section>
 
             </main>
         </div>
@@ -274,7 +292,7 @@
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'hidden';
                 playagain.style.position = 'absolute';
-                document.getElementById('guess').value = ""
+                document.getElementById('guess').value = "";
                 gameover();
             }
             else if (userguess > secretnum) {
@@ -442,6 +460,48 @@
                 resetbtn.style.position = 'absolute';
             }
         })
+
+
+        //PRIME NUMBER CHECKER ENGINE
+
+
+
+        let butn = document.getElementById('proced');
+
+        butn.addEventListener('click', () => {
+            let primeget = +(document.getElementById('primeinp').value);
+            let primeout = document.getElementById('primeout');
+            let q;
+            if (isNaN(primeget) || !primeget) {
+                verify('Enter a valid input', 'red');
+            }
+            else if (primeget < 60 || primeget > 150) {
+                verify('(60-150)only', 'yellow');
+            }
+            else {
+                for (q = 2; q < primeget; q++) {
+                    console.log(q);
+                    if (primeget % q == 0) {
+                        verify(`Wrong ${primeget} is not a prime number`, 'red');
+                        console.log(q);
+                        break;
+                    }
+                }
+                if (primeget == q) {
+                    verify(`Correct ${primeget} is a prime number `, ' rgb(73, 239, 7)');
+                    console.log(q);
+                }
+            }
+        })
+        function verify(message, color) {
+            document.getElementById('primeinp').value = "";
+
+            primeout.innerHTML = message;
+            primeout.style.color = color;
+
+        }
+
+
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ligth.css" id="links">
+    <style>
+        #gues:active{
+            transform: scale(0.9);
+
+        }
+    </style>
 </head>
 
 
 <body>
 
-    <div>
+    <!-- <div>
         <button onclick="light()">light mode</button>
         <button onclick="dark()">dark mode</button>
     </div>
@@ -30,28 +36,133 @@
 
     <h1 class="may" id="mal"
         style="text-align: center;color: white;background:darkblue ;border-radius: 20px;padding: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    </h1>
+    </h1> -->
+<div style=" display: flex;justify-content: center;align-items: center;margin-top: 150px;">
+    <div style="background: rgb(250, 255, 155);padding: 20px 40px;border-radius: 30px;">
+        <div>
+        <h1 style="margin: auto;width: fit-content;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">ODD & EVEN NUMBER CHECKER</h1>
+        </div>
 
-    <h1 style="margin: auto;width: fit-content;">Application form</h1>
+        <div style="display: flex;justify-content: center;align-items: center;margin-top: 20px;">
 
-    <div style="display: flex;justify-content: center;align-items: center;">
-
-        <input type="text" required id="myage" placeholder="how old are you" style="width: 250px;height: 40px">
-        <button onclick="load()" style="height: 45px;background: green;color: white;">check Eligibility</button>
+            <input type="text" id="eveninp" placeholder="check even number btw 60-80" style="width: 250px;padding: 15px 20px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border:none;">
+            <button style="height: 45px;background: green;color: white;padding: 5px 10px;font-size: 20px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border:none;"  id="gues">Check</button>
+        </div>
+        <h1 id="ans" style="margin: auto;width: fit-content; display: flex;justify-content: center;align-items: center;text-align: center;"></h1>
     </div>
-    <h1 id="result" style="margin: auto;width: fit-content;"></h1>
+</div>
+    <!-- <input type="text" >
+    <p ></p>
+    <button >check</button> -->
 
 
 
 
 
     <script>
+
+        let jh='damn is a nice boy guy';
+
+        // jh.indexOf('damn');
+        console.log(jh.slice('guy'));
+       
+
+
+
+
+       
+        let guess=document.querySelector('#gues');
+        let a,ans,b;
+       
+    
+        guess.addEventListener('click', ()=>{
+
+            a=document.querySelector('#eveninp').value;
+            ans=document.querySelector('#ans');
+
+
+            if(a<60 || a>80 || isNaN(a)||!a){
+                mistake(ans,a)
+
+                    
+            }
+            else{
+                for(let b=2;b<3;b++){
+                    if(a%b==1){
+                       
+                        ans.innerHTML=`Correct ${a}  is an odd number`;
+                        ans.style.color='green';
+                        console.log(a);
+                        console.log(b);
+                        break;
+                    
+                    }
+                } 
+                if(a%b==0){
+                    ans.innerHTML=`Wrong ${a} is not an old number, Its an even number`;
+                    ans.style.color='red';
+                    console.log(a);
+                    console.log(b);
+             
+                }
+            }
+        })
+        function mistake(ans,a){
+           
+           
+            ans.innerHTML=`--Invalid input`;
+            ans.style.color='yellow';
+            console.log(a);
+            console.log(b);
+           
+        }
+             
+          
+               
+               
+                   
+                
+                   
+
+             
+                
+        
+           
+
+           
+
+           
+            
+           
+           
+
+           
+        
+
+       
+ 
+       
+       
+
+
+
+
         // let a=prompt('what year where u born');
         // let k= new Date().getfullyear();
 
-        for(let i =0; i<=10; i++){
-            document.write(`number ${i}:<br>`)
-          }
+        // for(let i =0; i<=10; i++){
+        //     document.write(`number ${i}:<br>`)
+        //   };
+
+        //   let i=3;
+        //   while(i) alert(i--)
+
+        //   let a =0
+        //   do{
+        //     alert(a)
+        //     a++;
+           
+        //   } while(a>3)
 
 
         

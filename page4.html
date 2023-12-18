@@ -39,7 +39,7 @@
             </a>
             <a href="page5.html" class="">
 
-                <p class="p">NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+                <p class="p">NUMBER GAME&<br>INVESTMENT CALCULATOR&<br>PRIME NUMBER CHECKER</p>
             </a>
 
         </nav>
@@ -62,7 +62,7 @@
 
         </nav>
 
-        <div class="offcanvas offcanvas-top m-0 w-100" id="offcan" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-top m-0 w-100 h-100" id="offcan" aria-labelledby="offcanvasRightLabel">
 
             <div class="offcanvas-header d-flex justify-content-end">
 
@@ -89,7 +89,7 @@
                     </a>
                     <a href="page5.html" class="">
 
-                        <p>NUMBER GAME&<br>INVESTMENT CALCULATOR</p>
+                        <p>NUMBER GAME&<br>INVESTMENT CALCULATOR&<br>PRIME NUMBER CHECKER</p>
                     </a>
                 </nav>
 
@@ -135,10 +135,10 @@
                             <span id="symbol"></span>
                         </div>
                         <div class="buttons">
-                            <button onclick="plus()" id="plus"><i class="fa-solid fa-plus"></i></button>
-                            <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
-                            <button onclick="divide()"><i class="fa-solid fa-divide"></i></button>
-                            <button onclick="multiply()"><i class="fa-solid fa-xmark"></i></button>
+                            <button class="btncalc" value="plus"><i class="fa-solid fa-plus"></i></button>
+                            <button class="btncalc" value="minus"><i class="fa-solid fa-minus"></i></button>
+                            <button class="btncalc" value="divide"><i class="fa-solid fa-divide"></i></button>
+                            <button class="btncalc" value="multiply"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                         <div class="answer">
                             <span id="answer"></span>
@@ -181,58 +181,106 @@
 
 
     <script>
-        // CALCULATOR ENGINE
-        let a, b, c, d;
 
-        function mistakes() {
-            if (isNaN(a) || isNaN(b)) {
-                document.getElementById('answer').innerHTML = `invalid value(s) ❌`;
 
-                document.getElementById('answer').style.color = 'red';
+
+
+
+        let bttn = document.querySelectorAll('.btncalc');
+
+        for (let i = 0; i < bttn.length; i++) {
+            bttn[i].addEventListener('click', () => {
+                let a = +(document.getElementById('inp1').value);
+                let b = +(document.getElementById('inp2').value);
+                let c = document.getElementById('answer');
+                let d = document.getElementById('symbol');
+
+
+                if (isNaN(a) || isNaN(b) || !a || !b) {
+                    c.innerHTML = `invalid value(s) ❌`;
+
+                    c.style.color = 'red';
+                    d.innerHTML = `?`;
+
+                }
+                else {
+                    performcalc(i, a, b, c, d)
+                }
+
+            })
+
+
+        }
+
+        function performcalc(i, a, b, c, d) {
+
+            if (bttn[i].value == 'plus') {
+
+                c.innerHTML = a + b;
+                d.innerHTML = `+`;
+
 
             }
-            else if (!a || !b) {
-                document.getElementById('answer').innerHTML = `NULL Input value(s)  ✏`;
-                document.getElementById('answer').style.color = 'orange';
+            else if (bttn[i].value == 'minus') {
+
+                c.innerHTML = a - b;
+                d.innerHTML = `-`;
+
+
+
             }
-            else {
+            else if (bttn[i].value == 'divide') {
 
-                document.getElementById('answer').innerHTML = `${c}`;
-                document.getElementById('answer').style.color = 'black';
+                c.innerHTML = a / b;
+                d.innerHTML = `/`;
+
+
             }
-        }
+            else if (bttn[i].value == 'multiply') {
 
-        function plus() {
-            a = +document.getElementById('inp1').value;
-            b = +document.getElementById('inp2').value;
-            c = a + b
-            d = document.getElementById('symbol');
-            d.innerHTML = `+`;
-            mistakes()
+                c.innerHTML = a * b;
+                d.innerHTML = `*`;
+
+
+            }
 
 
         }
-        function minus() {
 
-            c = a - b
-            d.innerHTML = `-`;
-            mistakes()
 
-        }
-        function divide() {
 
-            c = a / b
-            d.innerHTML = `/`;
-            mistakes()
 
-        }
-        function multiply() {
 
-            c = a * b
-            d.innerHTML = `*`;
-            mistakes()
 
-        }
+
+
+
+        // function minus() {
+
+        //     c = a - b
+        //     d.innerHTML = `-`;
+        //     mistakes()
+
+        // }
+        // function divide() {
+
+
+
+        // }
+        // function multiply() {
+
+
+
+        // }
+
+
+
+
+
+
+
+
+
 
 
 

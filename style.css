@@ -1,7 +1,8 @@
 .body {
-    padding: 0px 0px 100px 25%;
+    padding: 0px 0px 50px 23%;
     background-color: black;
     overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -58,7 +59,7 @@
 }
 
 .flowp #max {
-    background: black;
+    background: rgb(9, 9, 9);
     width: fit-content;
     position: fixed;
     left: 0;
@@ -84,11 +85,11 @@
     border-radius: 10px;
 }
 
-.flowp #max .p:hover{
+.flowp #max .p:hover {
     background: rgb(67, 67, 67);
 }
 
-.activelink{
+.activelink {
     background: rgb(67, 67, 67);
     padding: 15px 25px;
     border-radius: 10px;
@@ -132,23 +133,10 @@
     height: 100px;
 }
 
-/* .flowp #ul {
-    width: 250px;
-    height: 200px;
-} */
 
-/* .flowp .muy{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 80px;
-    width: 100%;
-    margin: auto;
-} */
 
 .flowp .pol {
-    /* display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0px; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,6 +159,77 @@
 
 .flowp #oper {
     margin-top: 0;
+}
+
+.scopes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(37, 37, 37);
+    padding: 50px;
+}
+
+/* .scopes section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.scopes h2 {
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.scopes h3 {
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.scopes p {
+    font-size: 25px;
+    color: white;
+    margin: 30px 0px 0px 0px;
+}
+
+.ju {
+    width: 80%;
+    margin: auto;
+}
+
+.ju img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.loops {
+    background: rgb(128, 128, 128);
+    text-align: center;
+}
+
+.loops h2 {
+    margin-top: 40px;
+    color: rgb(237, 237, 237);
+    font-size: 40px;
+}
+
+.loops h3 {
+    margin-top: 40px;
+    color: white;
+}
+.loops p{
+    font-size: 25px;
+}
+
+.loops ul {
+    list-style: none;
+    font-size: 25px;
+    text-align: left;
+    display: grid;
+    place-items: center;
 }
 
 
@@ -223,7 +282,7 @@
 
 .mike .buttons {
     display: grid;
- 
+
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -257,7 +316,7 @@
 .mike .max {
     position: absolute;
     margin-bottom: 230px;
-   
+
 }
 
 .mike #symbol {
@@ -284,6 +343,9 @@
     font-weight: bolder;
     background: rgb(188, 188, 188);
 }
+
+
+
 
 .mike .klm {
     display: flex;
@@ -422,76 +484,126 @@
     color: rgba(0, 0, 0, 0.863);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.invest{
-    animation: invest 7s  ease-in-out 0s infinite alternate;
+
+.invest {
+    animation: invest 7s ease-in-out 0s infinite alternate;
     padding: 150px 0px;
     border-radius: 30px;
-    margin-top:60px;
+    margin-top: 60px;
 }
+
 @keyframes invest {
-    0%{
+    0% {
         background-image: url(inves1.jfif);
         background-repeat: no-repeat;
         background-size: cover;
 
 
     }
-    50%{
+
+    50% {
         background-image: url(inves2.jfif);
         background-repeat: no-repeat;
         background-size: cover;
 
 
     }
-    100%{
+
+    100% {
         background-image: url(inves3.jfif);
         background-repeat: no-repeat;
         background-size: cover;
 
 
     }
-    
-}
-.invest-cal{
-    margin:auto;
-    display:grid;
-    place-items: center;
-   
-}
-.mag{
-    margin: 10px 0px;
-    display: grid;
-    place-items:center;
+
 }
 
-.invest-cal input,select{
-    margin:auto;
+.invest-cal {
+    margin: auto;
+    display: grid;
+    place-items: center;
+
+}
+
+.mag {
+    margin: 10px 0px;
+    display: grid;
+    place-items: center;
+}
+
+.invest-cal input,
+select {
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#results{
-   margin-top: 40px;
-   visibility: hidden;
-   position: absolute;
-   display: grid;
-    place-items:center;
-  
+
+#results {
+    margin-top: 40px;
+    visibility: hidden;
+    position: absolute;
+    display: grid;
+    place-items: center;
+
 }
-#months,#amount,#btn,#btn2{
+
+#months,
+#amount,
+#btn,
+#btn2 {
     padding: 9px 20px;
     border-radius: 10px;
 }
-#btn,#btn2{
-    border:none;
-    background:  rgb(8, 87, 184);
-    color:white;
-    font-size:20px;
-    margin-top:20px;
+
+#btn,
+#btn2 {
+    border: none;
+    background: rgb(8, 87, 184);
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.h4d{
-    border-bottom: 1px solid  rgb(54, 54, 54);
+.h4d {
+    border-bottom: 1px solid rgb(54, 54, 54);
+}
+
+#calpp {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+
+}
+
+#calpp button {
+    margin-top: 20px;
+    font-size: 23px;
+    text-transform: capitalize;
+    border: none;
+    background: rgb(8, 87, 184);
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+
+}
+
+#calpp input {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#calpp span {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.prime {
+    margin-top: 70px;
+
 }
 
 
@@ -574,7 +686,7 @@
         width: 100%;
     }
 
-   
+
 
     .flowp #kl {
         width: 220px;
@@ -614,14 +726,14 @@
     }
 
     .flowp #javahis {
-       
+
         margin: auto;
     }
 
 
-   
 
-   
+
+
 
     .jop {
         display: flex;
@@ -654,7 +766,7 @@
 
 @media screen and (max-width:430px) {
     .flowp #javahis h1 {
-       
+
         margin: auto;
         font-size: 40px;
     }
@@ -678,5 +790,10 @@
         animation: body 7s ease-in-out 0s infinite alternate;
         padding: 100px 20px;
         border-radius: 30px;
+    }
+
+    .ju img {
+
+        border-radius: 1px;
     }
 }

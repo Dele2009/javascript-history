@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamp Control</title>
+  <style>
+    #lamp {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="lamp"></div>
+<button onclick="toggleLamp()">Toggle Lamp</button>
+
+<script>
+  var lampIsOn = true;
+
+  function toggleLamp() {
+    var lamp = document.getElementById("lamp");
+
+    if (lampIsOn) {
+      // Turn off the lamp
+      lamp.style.backgroundColor = "grey";
+      lampIsOn = false;
+    } else {
+      // Turn on the lamp
+      lamp.style.backgroundColor = "yellow";
+      lampIsOn = true;
+    }
+  }
+</script>
+
+</body>
+</html>
