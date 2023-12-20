@@ -167,6 +167,7 @@
     align-items: center;
     background: rgb(37, 37, 37);
     padding: 50px;
+    overflow-x: hidden;
 }
 
 /* .scopes section{
@@ -195,7 +196,7 @@
 }
 
 .ju {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -208,6 +209,7 @@
 .loops {
     background: rgb(128, 128, 128);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .loops h2 {
@@ -220,7 +222,8 @@
     margin-top: 40px;
     color: white;
 }
-.loops p{
+
+.loops p {
     font-size: 25px;
 }
 
@@ -231,6 +234,63 @@
     display: grid;
     place-items: center;
 }
+
+.methods {
+    background: rgb(37, 37, 37);
+    text-align: center;
+    font-size: ;
+    color: white;
+    padding: 60px;
+}
+.methods section{
+    margin-top: 60px;
+}
+.methods h2{
+    font-size: 40px;
+}
+.methods h3{
+    font-size: 37px;
+}
+.methods h5{
+    font-size: 30px;
+}
+.methods p{
+    font-size: 20px;
+}
+.methods header{
+    margin-top: 15%;
+   
+}
+
+/* .methods  {
+
+
+
+    text-align: center;
+    font-size: ;
+    color: white;
+
+}
+
+.methods h3 {
+    text-align: center;
+    font-size: ;
+    color: white;
+
+}
+
+.methods h5 {
+    text-align: center;
+    font-size: ;
+    color: white;
+}
+
+.methods p {
+    text-align: center;
+    font-size: ;
+    color: white;
+} */
+
 
 
 

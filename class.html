@@ -37,7 +37,7 @@
     <h1 class="may" id="mal"
         style="text-align: center;color: white;background:darkblue ;border-radius: 20px;padding: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     </h1> -->
-<div style=" display: flex;justify-content: center;align-items: center;margin-top: 150px;">
+<!-- <div style=" display: flex;justify-content: center;align-items: center;margin-top: 150px;">
     <div style="background: rgb(250, 255, 155);padding: 20px 40px;border-radius: 30px;">
         <div>
         <h1 style="margin: auto;width: fit-content;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">ODD & EVEN NUMBER CHECKER</h1>
@@ -50,10 +50,57 @@
         </div>
         <h1 id="ans" style="margin: auto;width: fit-content; display: flex;justify-content: center;align-items: center;text-align: center;"></h1>
     </div>
-</div>
+</div> -->
     <!-- <input type="text" >
     <p ></p>
     <button >check</button> -->
+
+
+
+    <div >
+        <form action="" name="userform" onclick="return(formvalidation())">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="username" ></td>
+                    <td><span id="name"></span></td>              
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="userage" ></td>
+                    <td><span id="age"></span></td>             
+                </tr>
+                <tr>
+                    <td>email:</td>
+                    <td><input type="text" name="useremail" ></td>
+                    <td><span id="email"></span> </td>              
+                 </tr>
+                <tr>
+                    <td>zip-code:</td>
+                    <td><input type="text" name="userzipcode" ></td>
+                    <td><span id="zipcode"></span></td>
+                </tr>
+                <tr>
+                    <td>country:</td>
+                    <td>
+                        <select name="usercountry" id="" else >
+                            <option value="0" selected >select a country</option>
+                            <option value="yes">NIGERIA</option>
+                            <option value="yes">LONDON</option>
+                            <option value="yes">AMERICA</option>
+                        </select>
+                    </td>
+                    <td><span id="country"></span></td>
+                </tr>
+               
+                   
+               
+            </table>
+            <button type="submit">submit</button>
+          
+        </form>
+        <!-- <button type="submit" onclick="formvalidation()">submit</button> -->
+    </div>
 
 
 
@@ -61,61 +108,204 @@
 
     <script>
 
-        let jh='damn is a nice boy guy';
 
-        // jh.indexOf('damn');
-        console.log(jh.slice('guy'));
+
+
+
+
+
+
+
+        function formvalidation(){
+            let email= /^\w+@[a-z]+\.[a-z]{2,3}$/ ;
+            let age= /^[0-9]+$/ ;
+            let name= /^[a-zA-Z]+$/ ;
+            let nameinp=document.userform.username;
+            let ageinp=document.userform.userage;
+            let emailinp=document.userform.useremail;
+            let zipinp=document.userform.userzipcode;
+            let countryinp=document.userform.usercountry;
+            let errorname=document.querySelector('#name');
+            let errorage=document.querySelector('#age');
+            let erroremail=document.querySelector('#email');
+            let errorzip=document.querySelector('#zipcode');
+            let errorcountry=document.querySelector('#country');
+            let allinp=document.querySelectorAll('input');
+            let allspan=document.querySelectorAll('span');
+
+
+            if(!nameinp.value.match(name)){
+                errorname.innerHTML='Cannot be empty, kindly fill this section'
+                nameinp.style.outline='1px solid red';
+                nameinp.focus();
+                return false;
+               
+               
+
+            }
+           
+           if(!ageinp.value.match(age)){
+                errorage.innerHTML='Invalid, must be digits'
+                ageinp.style.outline='1px solid red';
+                ageinp.focus();
+                return false;
+               
+            }
+           
+            if(!emailinp.value.match(email)){
+                erroremail.innerHTML='Email format not valid, pls correct'
+                emailinp.style.outline='1px solid red';
+                emailinp.focus();
+                return false;
+               
+            }
+           
+            if(zipinp.value.length>5){
+                errorzip.innerHTML='Can not be more than 5-digits'
+                zipinp.style.outline='1px solid red';
+                zipinp.focus();
+                return false;
+               
+            }
+           
+           if(!zipinp.value.match(age)){
+                errorzip.innerHTML='Cannot be empty, pls fill'
+                zipinp.style.outline='1px solid red';
+                zipinp.focus();
+                return false;
+               
+            }
+           
+            if(countryinp.value=='0'){
+                errorcountry.innerHTML='Please select a country'
+                countryinp.style.outline='1px solid red';
+                countryinp.focus();
+                return false;
+               
+            }
+
+            else {
+                return true;
+            }
+           
+            //     // else{
+        //     //     if(nameinp.value.match(name)){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     //     }
+        //     //     if(ageinp.value.match(age)){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     //     }
+        //     //     if(emailinp.value.match(email)){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     //     }
+        //     //     if(zipinp.value.length==5){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     //     }
+        //     //     if(zipinp.value.match(age)){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     //     }
+        //     //     else if(countryinp.value=='yes'){
+        //     //         form(allspan,'✔✔','green');
+        //     //         return true;
+        //     // }
+
+        //     // }
+        //     // else{
+        //     //     for(let i=0;i<allinp.length;i++){
+        //     //         allinp[i].style.outline='1px solid green'
+                   
+        //     //     }
+        //     //     for(let i=0;i<allspan.length;i++){
+        //     //         allspan[i].innerHTML=""
+        //     //     }
+        //     //     allinp.forEach(input =>{
+        //     //         input.style.outline='1px solid green';
+        //     //     })
+        //     //     allspan.forEach(span =>{
+        //     //         span.innerHTML="✔✔";
+        //     //         span.style.color='green'
+        //     //     })
+        //     //     countryinp.style.outline='1px solid green';
+        //     //     return true;
+               
+
+        //     // }
+        }
+        function form(allspan,message,color){
+            allspan.forEach(span =>{
+                span.innerHTML=message;
+                span.style.color=color;
+            })
+        }
+
+
+
+
+
+
+
+
+
+        // let jh='damn is a nice boy guy';
+
+        //jh.indexOf('damn');
+        // console.log(jh.slice('guy'));
        
 
 
 
 
        
-        let guess=document.querySelector('#gues');
-        let a,ans,b;
+        // let guess=document.querySelector('#gues');
+        // let a,ans,b;
        
     
-        guess.addEventListener('click', ()=>{
+        // guess.addEventListener('click', ()=>{
 
-            a=document.querySelector('#eveninp').value;
-            ans=document.querySelector('#ans');
+        //     a=document.querySelector('#eveninp').value;
+        //     ans=document.querySelector('#ans');
 
 
-            if(a<60 || a>80 || isNaN(a)||!a){
-                mistake(ans,a)
+        //     if(a<60 || a>80 || isNaN(a)||!a){
+        //         mistake(ans,a)
 
                     
-            }
-            else{
-                for(let b=2;b<3;b++){
-                    if(a%b==1){
+        //     }
+        //     else{
+        //         for(let b=2;b<3;b++){
+        //             if(a%b==1){
                        
-                        ans.innerHTML=`Correct ${a}  is an odd number`;
-                        ans.style.color='green';
-                        console.log(a);
-                        console.log(b);
-                        break;
+        //                 ans.innerHTML=`Correct ${a}  is an odd number`;
+        //                 ans.style.color='green';
+        //                 console.log(a);
+        //                 console.log(b);
+        //                 break;
                     
-                    }
-                } 
-                if(a%b==0){
-                    ans.innerHTML=`Wrong ${a} is not an old number, Its an even number`;
-                    ans.style.color='red';
-                    console.log(a);
-                    console.log(b);
+        //             }
+        //         } 
+        //         if(a%b==0){
+        //             ans.innerHTML=`Wrong ${a} is not an old number, Its an even number`;
+        //             ans.style.color='red';
+        //             console.log(a);
+        //             console.log(b);
              
-                }
-            }
-        })
-        function mistake(ans,a){
+        //         }
+        //     }
+        // })
+        // function mistake(ans,a){
            
            
-            ans.innerHTML=`--Invalid input`;
-            ans.style.color='yellow';
-            console.log(a);
-            console.log(b);
+        //     ans.innerHTML=`--Invalid input`;
+        //     ans.style.color='yellow';
+        //     console.log(a);
+        //     console.log(b);
            
-        }
+        // }
              
           
                
