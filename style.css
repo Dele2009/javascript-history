@@ -210,6 +210,7 @@
     background: rgb(128, 128, 128);
     text-align: center;
     overflow-x: hidden;
+    padding: 50px;
 }
 
 .loops h2 {
@@ -240,7 +241,7 @@
     text-align: center;
     font-size: ;
     color: white;
-    padding: 60px;
+    padding: 50px;
 }
 .methods section{
     margin-top: 60px;
@@ -250,9 +251,10 @@
 }
 .methods h3{
     font-size: 37px;
-}
+}    
 .methods h5{
     font-size: 30px;
+    
 }
 .methods p{
     font-size: 20px;
@@ -855,5 +857,115 @@ select {
     .ju img {
 
         border-radius: 1px;
+    }
+    .scopes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(37, 37, 37);
+        padding: 50px;
+        overflow-x: hidden;
+    }
+    
+    /* .scopes section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    .scopes h2 {
+        margin: 30px 0px 0px 0px;
+        text-align: left;
+        color: white;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    
+    .scopes h3 {
+        margin: 50px 0px 0px 0px;
+        text-align: left;
+        color: rgb(255, 255, 255);
+    }
+    
+    .scopes p {
+        font-size: 20px;
+        color: white;
+        margin: 30px 0px 0px 0px;
+    }
+    
+
+    
+    .ju {
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+      
+    }
+    
+    .ju img {
+        width: 600px;
+        margin-top: 20px;
+        border-radius: 20px;
+       
+    }
+    
+    .loops {
+        background: rgb(128, 128, 128);
+        text-align: left;
+        overflow-x: hidden;
+       
+    }
+    
+    .loops h2 {
+        margin-top: 40px;
+        color: rgb(237, 237, 237);
+        font-size: 40px;
+    }
+    
+    .loops h3 {
+        margin-top: 40px;
+        color: white;
+    }
+    
+    .loops p {
+        font-size: 20px;
+    }
+    
+    .loops ul {
+        list-style: disc;
+        font-size: 20px;
+        text-align: left;
+        display: grid;
+        place-items: center;
+    }
+    
+    .methods {
+        background: rgb(37, 37, 37);
+        text-align: left;
+        font-size: ;
+        color: white;
+        padding: 60px;
+    }
+    .methods section{
+        margin-top: 30px;
+    }
+    .methods h2{
+        font-size: 35px;
+        text-align: center;
+        width: 100%;
+        
+    }
+    .methods h3{
+        font-size: 30px;
+    }
+    .methods h5{
+        font-size: 20px;
+    }
+    .methods p{
+        font-size: 15px;
+    }
+    .methods header{
+        margin-top: 15%;
+
+       
     }
 }
