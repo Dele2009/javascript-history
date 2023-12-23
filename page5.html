@@ -230,6 +230,7 @@
     <script>
         let backplace, userguess, output, fant, inp, hscore, highscore;
         let score = 30;
+        let head=document.querySelector('.h2d');
         let secretnum = Math.trunc(Math.random() * 25) + 10;
         console.log(`Secrt No-${secretnum}`);
         let guess = document.getElementById('button');
@@ -259,6 +260,8 @@
                 output.style.color = 'gold';
                 playagain.style.visibility = 'visible';
                 playagain.style.position = 'relative';
+                head.style.visibility = 'hidden';
+                head.style.position = 'absolute';
             }
         }
 
@@ -311,13 +314,15 @@
                 inp.style.position = 'absolute';
                 guess.style.visibility = 'hidden';
                 guess.style.position = 'absolute';
-                output.innerHTML = `you are correct <br> the number was "${secretnum}" `;
+                output.innerHTML = `You are correct <br> the number was "${secretnum}" `;
                 output.style.color = 'green';
                 output.style.fontSize = '25px';
                 playagain.style.visibility = 'visible';
                 playagain.style.position = 'relative';
                 playagain.style.margin = 'auto';
                 backplace.style.backgroundColor = 'lightgreen';
+                head.style.visibility = 'hidden';
+                head.style.position = 'absolute';
                 if (score > hscore) {
                     highscore.innerHTML = `${score}`;
 
@@ -348,6 +353,8 @@
             output.style.fontSize = '';
             playagain.style.visibility = 'hidden';
             playagain.style.position = 'absolute';
+            head.style.visibility = 'visible';
+                head.style.position = 'relative';
 
 
 
