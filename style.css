@@ -151,10 +151,12 @@
 .flowp .small-nav {
     visibility: hidden;
     position: absolute;
+    padding: 10px;
 }
 
 .flowp #Array {
     height: 320px;
+
 }
 
 .flowp #oper {
